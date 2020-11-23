@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <img src="images/logo.png" alt="logo scouts woudloper">
+      <ul>
+        <a href="index.html" class="active"><li>Home</li></a>
+        <a href="event.html"><li>Evenementen</li></a>
+        <a href=""><li>Nieuws</li></a>
+        <a href="contact.html"><li>Contact</li></a>
+      </ul>
+    </nav>
+    <div class="container">
+      <a href="" class="button">Wordt nu lid!</a>
+      <div id="card-calendar">
+        <h2 class="card-header" id="monthAndYear"></h2>
+        <table class="table" id="calendar">
+          <thead>
+            <tr>
+              <th>Zo</th>
+              <th>Ma</th>
+              <th>Di</th>
+              <th>Wo</th>
+              <th>Do</th>
+              <th>Vr</th>
+              <th>Za</th>
+            </tr>
+          </thead>
+          <tbody id="calendar-body">
+          </tbody>
+          <div class="calendar-buttons">
+
+            <button class="previousBtn" onClick=calendarPrev()><span></span></button>
+            <button class="nextBtn" onClick=calendarNext()><span></span></button>
+          </div>
+        </table>
+        
+      </div>
+    </div>
+    <div class="underline"></div>
+  </header>
+  <section id="intro">
+    <article class="container">
+      <h1>Wie zijn we?</h1>
+      <h2>Bizon en Panda</h2>
+      <div class="content_text">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, est? Numquam perferendis consequuntur reiciendis ut nisi obcaecati, eligendi assumenda, vero quis cum harum officiis aliquid! Odit inventore sint sapiente consequuntur?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, est? Numquam perferendis consequuntur reiciendis ut nisi obcaecati, eligendi assumenda, vero quis cum harum officiis aliquid! Odit inventore sint sapiente consequuntur?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, est? Numquam perferendis consequuntur reiciendis ut nisi obcaecati, eligendi assumenda, vero quis cum harum officiis aliquid! Odit inventore sint sapiente consequuntur?</p>
+      </div>
+    </article>
+  </section>
+  <section id="evenementen">
+    <article class="container">
+      <h1>Evenementen</h1>
+      <div class="slider content_text">
+        <span class="arrow-left"></span>
+        <article>
+          <h2>Groot kamp</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
+          <a href="">Lees meer...</a>
+        </article>
+        <article>
+          <h2>Groot kamp</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
+          <a href="">Lees meer...</a>
+        </article><article>
+          <h2>Groot kamp</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
+          <a href="">Lees meer...</a>
+        </article>
+        <span class="arrow-right"></span>
+      </div>
+    </article>
+  </section>
+  <footer>
+    <article class="container">
+      <h2>Interessante links</h2>
+      <ul>
+        <a href="">Evenementen</a>
+        <a href="">Contacteer ons</a>
+        <a href="">Inschrijvingsformulier</a>
+        <a href="">Onze agenda</a>
+        <a href="">Algemeen reglement</a>
+        <a href="">Infobrief groot kamp</a>
+      </ul>
+    </article>
+    <div>
+      <img src="images/logo.png" alt="logo scouts woudloper">
+    </div>
+  </footer>
+</body>
+<script src="script.js"></script>
+</html>

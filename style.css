@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*{
+  box-sizing: border-box;
+  border-spacing: 0;
+}
+/* 
+roboto light weight: 300
+roboto regular weight: 400
+roboto medium weight: 500
+roboto bold weight: 700
+
+*/
+
+body,html{
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+}
+
+body, p{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #003575;
+}
+
+body > :nth-child(odd){
+  clip-path: polygon(0 0, 100% 3vw, 100% calc(100% - 3vw), 0% 100%);
+  padding: 4rem 0 7rem;
+  background-color: #D8E0E5;
+  z-index: 9;
+}
+
+body > :nth-child(2){
+  z-index: 0;
+  padding: 5rem 0 8rem;
+  margin-top: -4rem;
+  margin-bottom: -5rem;
+  background-color: #fff;
+  border-top: solid 5px #0559D3;
+}
+
+body > :first-child{
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
+  padding: 2rem 0 7rem;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.flex{
+  display: flex;
+}
+
+h1{
+  font-weight: 300;
+  font-size: 30px;
+  color: #0559D3;
+  text-decoration: underline;
+}
+
+h2{
+  font-weight: 500;
+  font-size: 20px;
+  color: #0559D3;
+}
+
+header{
+  height: 90vh;
+  width: 100vw;
+  background-image: url('images/background.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 10;
+}
+
+#card-calendar{
+  margin-top: 3rem;
+  width: 500px;
+  background-color: rgba(216,224,229,0.6);
+  float: right;
+  border-radius: 5%;
+  position: relative;
+}
+
+table#calendar{
+  display: block;
+  margin: 0;
+}
+
+#card-calendar h2{
+  text-align: center;
+}
+
+#card-calendar thead{
+  width: 100%;
+  display: inline-block;
+}
+
+#card-calendar thead tr{
+  width: 100%;
+  display: block;
+}
+
+#card-calendar thead th{
+  display: block;
+  float: left;
+  width: calc(100% / 7);
+}
+
+#card-calendar .calendar-buttons{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.calendar-buttons span{
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
+
+.calendar-buttons .previousBtn{
+  top: calc(40% - 15px);
+  left: -45px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color:#0559D3;
+  border: 0;
+  border-radius: 50%;
+}
+
+.calendar-buttons .nextBtn{
+  top: calc(40% - 15px);
+  left: 515px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color:#0559D3;
+  border: 0;
+  border-radius: 50%;
+}
+
+.calendar-buttons .previousBtn span{
+  margin-left: -2px;
+  clip-path: polygon(35% 50%, 100% 0, 100% 100%);
+}
+
+.calendar-buttons .nextBtn span{
+  margin-left: 5px;
+  clip-path: polygon(65% 50%, 0 0, 0 100%);
+}
+
+#calendar-body{
+  display: block;
+  width: 100%;
+}
+
+#calendar-body tr{
+  width: 100%;
+  display: inline-block;
+}
+
+#calendar-body tr td{
+  display: inline-block;
+  width: calc(100% / 7);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header .button{
+  margin-top: 3rem;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+header .button:hover{
+  background-color: #003575;
+}
+
+.container{
+  width: 1200px;
+  margin: auto;
+}
+
+nav{
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav img{
+  height: 100%;
+}
+
+nav a{
+  text-decoration: none;
+  color: #003575;
+  display: block;
+  padding: 0 1em;
+  position: relative;
+}
+
+a.button{
+  background-color: #0559D3;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+nav a.active::after{
+  position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: rgba(5, 90, 211, 1);
+	content: '';
+	opacity: 1;
+}
+
+nav a::after{
+  position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: rgba(5, 90, 211, 1);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+}
+
+nav a:hover::after,
+nav a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	transform: translateY(0px);
+}
+
+nav a:hover::after{
+
+}
+
+nav ul{
+  display: flex;
+  list-style-type: none;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+}
+
+
+
+.content_text{
+  display: flex;
+}
+
+.content_text p{
+  padding: 0 1em;
+  line-height: 1.4em;
+}
+
+.content_text p:first-child{
+  padding-left: 0;
+}
+
+.content_text p:last-child{
+  padding-right: 0;
+}
+
+body:nth-last-child(1){
+  background-color: #0559D3;
+  padding: 0 ;
+  
+}
+
+#contact-content img.icon{
+  width: 20px;
+  margin-right: 1em;
+}
+
+#contact-content .flex-item{
+  flex: 1;
+}
+
+#contact-content iframe{
+  height: 300px;
+}
+
+footer, footer h2, footer a{
+  color: white;
+  text-align: center;
+}
+
+footer a{
+  text-decoration: none;
+  padding:0.5rem 0;
+  width: calc(100% / 3);
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+footer ul{
+  text-transform: uppercase;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer div{
+  height: 25px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  margin-top: 3rem;
+
+}
+
+footer div img{
+  display: block;
+  height: 70%;
+  margin: auto;
+}
+
+/* media queries ---------------------------------------------- /*
+/*
+xs (for phones - screens less than 768px wide)
+
+sm (for tablets - screens equal to or greater than 768px wide)
+
+md (for small laptops - screens equal to or greater than 992px wide)
+
+lg (for laptops and desktops - screens equal to or greater than 1200px wide)
+*/

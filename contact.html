@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <img src="images/logo.png" alt="logo scouts woudloper">
+      <ul>
+        <a href="index.html" class="active"><li>Home</li></a>
+        <a href="event.html"><li>Evenementen</li></a>
+        <a href=""><li>Nieuws</li></a>
+        <a href=""><li>Contact</li></a>
+      </ul>
+    </nav>
+    <div class="container">
+      <a href="" class="button">Wordt nu lid!</a>
+      <div id="card-calendar">
+        <h2 class="card-header" id="monthAndYear"></h2>
+        <table class="table" id="calendar">
+          <thead>
+            <tr>
+              <th>Zo</th>
+              <th>Ma</th>
+              <th>Di</th>
+              <th>Wo</th>
+              <th>Do</th>
+              <th>Vr</th>
+              <th>Za</th>
+            </tr>
+          </thead>
+          <tbody id="calendar-body">
+          </tbody>
+          <div class="calendar-buttons">
+
+            <button class="previousBtn" onClick=calendarPrev()><span></span></button>
+            <button class="nextBtn" onClick=calendarNext()><span></span></button>
+          </div>
+        </table>
+        
+      </div>
+    </div>
+    <div class="underline"></div>
+  </header>
+  <section id="contact-content">
+    <article class="container">
+      <h1>Contact</h1>
+      <div class="flex">
+        <div class="flex-item">
+          <h2>VZW Woudloper</h2>
+          <p><img class="icon" src="images/icon-phone.png" alt=""> 0472/204899</p>
+          <p><img class="icon" src="images/incon-marker.png" alt="">Houte 27, </br> 9860 Balegem</p>
+          <p><img class="icon" src="images/icon-mail.png" alt="">info@woudloper.be</p>
+        </div>
+        <div class="flex-item">
+          <h2>VZW Woudloper</h2>
+          <p><img class="icon" src="images/icon-phone.png" alt=""> 0479/795956</p>
+          <p><img class="icon" src="images/incon-marker.png" alt="">Gijzelstraat 12, </br>9031 Drongen</p>
+          <p><img class="icon" src="images/icon-mail.png" alt="">eenheidsleiding@woudloper.be</p>
+        </div>
+        <div class="flex-item" ><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=50%25&amp;hl=en&amp;q=Gijzelstraat%2012,%209031%20Drongen+(Woudloper)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/route-planner.htm"></a></div>
+      </div>
+    </article>
+  </section>
+  <section id="contact-form">
+    <article class="container">
+      <h1>Contacteer ons</h1>
+      <form action="">
+        <input type="text" name="" id="" placeholder="NAAM">
+        <input type="text" name="" id="" placeholder="VOORNAAM">
+        <input type="text" name="" id="" placeholder="E-MAILADRES">
+        <input type="text" name="" id="" placeholder="ONDERWERP">
+        <input type="text" name="" id="">
+      </form>
+    </article>
+  </section>
+  <footer>
+    <article class="container">
+      <h2>Interessante links</h2>
+      <ul>
+        <a href="">Evenementen</a>
+        <a href="">Contacteer ons</a>
+        <a href="">Inschrijvingsformulier</a>
+        <a href="">Onze agenda</a>
+        <a href="">Algemeen reglement</a>
+        <a href="">Infobrief groot kamp</a>
+      </ul>
+    </article>
+    <div>
+      <img src="images/logo.png" alt="logo scouts woudloper">
+    </div>
+  </footer>
+</body>
+<script src="script.js"></script>
+</html>
