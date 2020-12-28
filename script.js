@@ -72,18 +72,19 @@ function calendarNext(){
 
 // toggle dropdown-menu
 
-const dropdownBtn = document.querySelector('.dropdown-menu');
-const dropdownList = document.querySelector('.dropdown-list');
+const $dropdownContainer = document.querySelector('.dropdown-menu');
+const $dropdownHamburger = document.querySelector('.dropdown-menu__button');
+const $dropdownList = document.querySelector('.dropdown-menu__list');
 let menuOpen = false;
 
-dropdownBtn.addEventListener('click', () => {
+$dropdownContainer.addEventListener('click', () => {
   if(!menuOpen){
-    dropdownBtn.classList.add('open');
-    dropdownList.classList.add('show-dropdown');
+    $dropdownContainer.classList.add('open');
+    $dropdownList.classList.add('show-dropdown');
     menuOpen = true;
   }else{
-    dropdownBtn.classList.remove('open');
-    dropdownList.classList.remove('show-dropdown');
+    $dropdownContainer.classList.remove('open');
+    $dropdownList.classList.remove('show-dropdown');
     menuOpen = false;
   }
 })
@@ -91,13 +92,13 @@ dropdownBtn.addEventListener('click', () => {
 
 let myNav = document.getElementById('navigation');
 window.onscroll = function () { 
-    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ) {
-        myNav.classList.add("nav-colored");
-        myNav.classList.remove("nav-transparent");
+    if (document.body.scrollTop >= 70 || document.documentElement.scrollTop >= 70 ) {
+        myNav.classList.remove("navigation-background__transparant");
+        myNav.classList.add("navigation-background__colored");
         console.log('ok');
     } 
     else {
-        myNav.classList.add("nav-transparent");
-        myNav.classList.remove("nav-colored");
+      myNav.classList.remove("navigation-background__colored");
+      myNav.classList.add("navigation-background__transparant");
     }
 };

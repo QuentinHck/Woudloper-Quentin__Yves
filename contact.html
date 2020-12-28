@@ -7,30 +7,37 @@
   <title>Document</title>
 </head>
 <body>
-  <header>
-    <div class="dropdown container">
+  <div id="navigation" class="navigation-background__transparant">
+    <div class="dropdown__navbar container">
       <img src="images/logo.png" alt="logo scouts woudloper">
       <div class="dropdown-menu">
-        <div class="dropdown-menu__button"></div>
+        <div class="dropdown-menu__button-container">
+          <div class="dropdown-menu__button"></div>
+        </div>
+        <div class="dropdown-menu__list">
+          <ul class="dropdown-menu__list-content">
+            <a href="index.html"  class="active"><li>Home</li></a>
+            <a href="event.html"><li>Evenementen</li></a>
+            <a href=""><li>Nieuws</li></a>
+            <a href="contact.html"><li>Contact</li></a>
+          </ul>
+        </div>  
       </div>
-      <ul class="dropdown-list">
-        <a href="index.html"  ><li>Home</li></a>
-        <a href="event.html"><li>Evenementen</li></a>
-        <a href=""><li>Nieuws</li></a>
-        <a href="contact.html" class="active"><li>Contact</li></a>
-      </ul>
     </div>
     <nav class="container">
       <img src="images/logo.png" alt="logo scouts woudloper">
       <ul>
-        <a href="index.html"><li>Home</li></a>
+        <a href="index.html"  class="active"><li>Home</li></a>
         <a href="event.html"><li>Evenementen</li></a>
         <a href=""><li>Nieuws</li></a>
-        <a href="contact.html" class="active"><li>Contact</li></a>
+        <a href="contact.html"><li>Contact</li></a>
       </ul>
     </nav>
+  </div>
+  <header>
     <div class="container">
-      <a href="" class="button-link__blue">Wordt nu lid!</a>
+      <a href="" class="button button-inschrijving button-link__blue">Wordt nu lid!</a>
+      <a href="" class="button button-agenda button-link__white">Agenda</a>
       <div id="card-calendar">
         <h2 class="card-header" id="monthAndYear"></h2>
         <table class="table" id="calendar">
@@ -65,13 +72,13 @@
           <div>
             <h2>VZW Woudloper</h2>
             <p><img class="icon" src="images/icon-phone.png" alt=""> 0472/204899</p>
-            <p><img class="icon" src="images/icon-marker.png" alt="">Houte 27, </br> 9860 Balegem</p>
+            <p><img class="icon" src="images/icon-marker.png" alt="">Houte 27, 9860 Balegem</p>
             <p><img class="icon" src="images/icon-mail.png" alt="">info@woudloper.be</p>
           </div>
           <div>
             <h2>VZW Woudloper</h2>
             <p><img class="icon" src="images/icon-phone.png" alt=""> 0479/795956</p>
-            <p><img class="icon" src="images/icon-marker.png" alt="">Gijzelstraat 12, </br>9031 Drongen</p>
+            <p><img class="icon" src="images/icon-marker.png" alt="">Gijzelstraat 12, 9031 Drongen</p>
             <p><img class="icon" src="images/icon-mail.png" alt="">eenheidsleiding@woudloper.be</p>
           </div>
         </div>

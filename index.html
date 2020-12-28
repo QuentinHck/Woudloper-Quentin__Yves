@@ -4,23 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Woudloper</title>
 </head>
 <body>
-  <header>
-    <div class="dropdown container">
+  <div id="navigation" class="navigation-background__transparant">
+    <div class="dropdown__navbar container">
       <img src="images/logo.png" alt="logo scouts woudloper">
       <div class="dropdown-menu">
-        <div class="dropdown-menu__button"></div>
+        <div class="dropdown-menu__button-container">
+          <div class="dropdown-menu__button"></div>
+        </div>
+        <div class="dropdown-menu__list">
+          <ul class="dropdown-menu__list-content">
+            <a href="index.html"  class="active"><li>Home</li></a>
+            <a href="event.html"><li>Evenementen</li></a>
+            <a href=""><li>Nieuws</li></a>
+            <a href="contact.html"><li>Contact</li></a>
+          </ul>
+        </div>  
       </div>
-      <ul class="dropdown-list">
-        <a href="index.html"  class="active"><li>Home</li></a>
-        <a href="event.html"><li>Evenementen</li></a>
-        <a href=""><li>Nieuws</li></a>
-        <a href="contact.html"><li>Contact</li></a>
-      </ul>
     </div>
-    <nav id="navigation" class="container">
+    <nav class="container">
       <img src="images/logo.png" alt="logo scouts woudloper">
       <ul>
         <a href="index.html"  class="active"><li>Home</li></a>
@@ -29,8 +33,12 @@
         <a href="contact.html"><li>Contact</li></a>
       </ul>
     </nav>
+  </div>
+  
+  <header>
     <div class="container">
-      <a href="" class="button-link__blue">Wordt nu lid!</a>
+      <a href="" class="button button-inschrijving button-link__blue">Wordt nu lid!</a>
+      <a href="" class="button button-agenda button-link__white">Agenda</a>
       <div id="card-calendar">
         <h2 class="card-header" id="monthAndYear"></h2>
         <table class="table" id="calendar">
@@ -56,7 +64,6 @@
         
       </div>
     </div>
-    <div class="underline"></div>
   </header>
   <section id="intro">
     <article class="container">
