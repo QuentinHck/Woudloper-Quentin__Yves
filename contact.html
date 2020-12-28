@@ -8,17 +8,29 @@
 </head>
 <body>
   <header>
+    <div class="dropdown container">
+      <img src="images/logo.png" alt="logo scouts woudloper">
+      <div class="dropdown-menu">
+        <div class="dropdown-menu__button"></div>
+      </div>
+      <ul class="dropdown-list">
+        <a href="index.html"  ><li>Home</li></a>
+        <a href="event.html"><li>Evenementen</li></a>
+        <a href=""><li>Nieuws</li></a>
+        <a href="contact.html" class="active"><li>Contact</li></a>
+      </ul>
+    </div>
     <nav class="container">
       <img src="images/logo.png" alt="logo scouts woudloper">
       <ul>
-        <a href="index.html" class="active"><li>Home</li></a>
+        <a href="index.html"><li>Home</li></a>
         <a href="event.html"><li>Evenementen</li></a>
         <a href=""><li>Nieuws</li></a>
-        <a href=""><li>Contact</li></a>
+        <a href="contact.html" class="active"><li>Contact</li></a>
       </ul>
     </nav>
     <div class="container">
-      <a href="" class="button">Wordt nu lid!</a>
+      <a href="" class="button-link__blue">Wordt nu lid!</a>
       <div id="card-calendar">
         <h2 class="card-header" id="monthAndYear"></h2>
         <table class="table" id="calendar">
@@ -47,39 +59,41 @@
     <div class="underline"></div>
   </header>
   <section id="contact-content">
-    <article class="container">
-      <h1>Contact</h1>
-      <div class="flex">
-        <div class="flex-item">
-          <h2>VZW Woudloper</h2>
-          <p><img class="icon" src="images/icon-phone.png" alt=""> 0472/204899</p>
-          <p><img class="icon" src="images/incon-marker.png" alt="">Houte 27, </br> 9860 Balegem</p>
-          <p><img class="icon" src="images/icon-mail.png" alt="">info@woudloper.be</p>
+    <div class="container">
+        <div class="contact-content__text">
+          <h1>Contact</h1>
+          <div>
+            <h2>VZW Woudloper</h2>
+            <p><img class="icon" src="images/icon-phone.png" alt=""> 0472/204899</p>
+            <p><img class="icon" src="images/icon-marker.png" alt="">Houte 27, </br> 9860 Balegem</p>
+            <p><img class="icon" src="images/icon-mail.png" alt="">info@woudloper.be</p>
+          </div>
+          <div>
+            <h2>VZW Woudloper</h2>
+            <p><img class="icon" src="images/icon-phone.png" alt=""> 0479/795956</p>
+            <p><img class="icon" src="images/icon-marker.png" alt="">Gijzelstraat 12, </br>9031 Drongen</p>
+            <p><img class="icon" src="images/icon-mail.png" alt="">eenheidsleiding@woudloper.be</p>
+          </div>
         </div>
-        <div class="flex-item">
-          <h2>VZW Woudloper</h2>
-          <p><img class="icon" src="images/icon-phone.png" alt=""> 0479/795956</p>
-          <p><img class="icon" src="images/incon-marker.png" alt="">Gijzelstraat 12, </br>9031 Drongen</p>
-          <p><img class="icon" src="images/icon-mail.png" alt="">eenheidsleiding@woudloper.be</p>
-        </div>
-        <div class="flex-item" ><iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=50%25&amp;hl=en&amp;q=Gijzelstraat%2012,%209031%20Drongen+(Woudloper)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://www.maps.ie/route-planner.htm"></a></div>
+      <div class="contact-content__map" >
+        <iframe scrolling="no" frameborder="0" scrolling="no" src="https://www.google.com/maps/d/embed?mid=1VxP_DYxFyTAG2fzirKjjFrH88uEdiMrD"></iframe>
       </div>
     </article>
   </section>
   <section id="contact-form">
-    <article class="container">
+    <div class="container">
       <h1>Contacteer ons</h1>
       <form action="">
         <input type="text" name="" id="" placeholder="NAAM">
         <input type="text" name="" id="" placeholder="VOORNAAM">
         <input type="text" name="" id="" placeholder="E-MAILADRES">
         <input type="text" name="" id="" placeholder="ONDERWERP">
-        <input type="text" name="" id="">
+        <input type="submit" name="" id="" value="verzenden">
       </form>
-    </article>
+    </div>
   </section>
   <footer>
-    <article class="container">
+    <section class="container">
       <h2>Interessante links</h2>
       <ul>
         <a href="">Evenementen</a>
@@ -89,7 +103,7 @@
         <a href="">Algemeen reglement</a>
         <a href="">Infobrief groot kamp</a>
       </ul>
-    </article>
+    </section>
     <div>
       <img src="images/logo.png" alt="logo scouts woudloper">
     </div>

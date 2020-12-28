@@ -1,3 +1,7 @@
+
+
+// agenda
+
 let today = new Date();
 let currentMonth = today.getMonth();
 let currentYear = today.getFullYear();
@@ -65,3 +69,35 @@ function calendarNext(){
   currentMonth = (currentMonth + 1) % 12;
   showCalendar(currentMonth,currentYear);
 }
+
+// toggle dropdown-menu
+
+const dropdownBtn = document.querySelector('.dropdown-menu');
+const dropdownList = document.querySelector('.dropdown-list');
+let menuOpen = false;
+
+dropdownBtn.addEventListener('click', () => {
+  if(!menuOpen){
+    dropdownBtn.classList.add('open');
+    dropdownList.classList.add('show-dropdown');
+    menuOpen = true;
+  }else{
+    dropdownBtn.classList.remove('open');
+    dropdownList.classList.remove('show-dropdown');
+    menuOpen = false;
+  }
+})
+
+
+let myNav = document.getElementById('navigation');
+window.onscroll = function () { 
+    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ) {
+        myNav.classList.add("nav-colored");
+        myNav.classList.remove("nav-transparent");
+        console.log('ok');
+    } 
+    else {
+        myNav.classList.add("nav-transparent");
+        myNav.classList.remove("nav-colored");
+    }
+};

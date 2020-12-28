@@ -8,7 +8,19 @@
 </head>
 <body>
   <header>
-    <nav class="container">
+    <div class="dropdown container">
+      <img src="images/logo.png" alt="logo scouts woudloper">
+      <div class="dropdown-menu">
+        <div class="dropdown-menu__button"></div>
+      </div>
+      <ul class="dropdown-list">
+        <a href="index.html"  class="active"><li>Home</li></a>
+        <a href="event.html"><li>Evenementen</li></a>
+        <a href=""><li>Nieuws</li></a>
+        <a href="contact.html"><li>Contact</li></a>
+      </ul>
+    </div>
+    <nav id="navigation" class="container">
       <img src="images/logo.png" alt="logo scouts woudloper">
       <ul>
         <a href="index.html"  class="active"><li>Home</li></a>
@@ -18,7 +30,7 @@
       </ul>
     </nav>
     <div class="container">
-      <a href="" class="button">Wordt nu lid!</a>
+      <a href="" class="button-link__blue">Wordt nu lid!</a>
       <div id="card-calendar">
         <h2 class="card-header" id="monthAndYear"></h2>
         <table class="table" id="calendar">
@@ -50,7 +62,7 @@
     <article class="container">
       <h1>Wie zijn we?</h1>
       <h2>Bizon en Panda</h2>
-      <div class="content_text">
+      <div class="intro-content_text">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, est? Numquam perferendis consequuntur reiciendis ut nisi obcaecati, eligendi assumenda, vero quis cum harum officiis aliquid! Odit inventore sint sapiente consequuntur?</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, est? Numquam perferendis consequuntur reiciendis ut nisi obcaecati, eligendi assumenda, vero quis cum harum officiis aliquid! Odit inventore sint sapiente consequuntur?</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et, est? Numquam perferendis consequuntur reiciendis ut nisi obcaecati, eligendi assumenda, vero quis cum harum officiis aliquid! Odit inventore sint sapiente consequuntur?</p>
@@ -60,28 +72,46 @@
   <section id="evenementen">
     <article class="container">
       <h1>Evenementen</h1>
-      <div class="slider content_text">
+      <div class="evenementen-slider content_text">
         <span class="arrow-left"></span>
-        <article>
-          <h2>Groot kamp</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
-          <a href="">Lees meer...</a>
-        </article>
-        <article>
-          <h2>Groot kamp</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
-          <a href="">Lees meer...</a>
-        </article><article>
-          <h2>Groot kamp</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
-          <a href="">Lees meer...</a>
-        </article>
+        <div class="evenementen-slider__wrapper">
+          <article class="evenementen-slider__item">
+            <div class="evenementen-slider__image">
+              <img src="images/camp.jpg" alt="mensen aan panorama met zonsondergang">
+            </div>
+            <div class="evenementen-slider__content">
+              <h2>Groot kamp</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
+              <a href="" class="button-link__blue">Lees meer...</a>
+            </div>  
+          </article>
+          <article class="evenementen-slider__item">
+            <div class="evenementen-slider__image">
+              <img src="images/camp.jpg" alt="mensen aan panorama met zonsondergang">
+            </div>
+            <div class="evenementen-slider__content">
+              <h2>Groot kamp</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
+              <a href="" class="button-link__blue">Lees meer...</a>
+            </div>  
+          </article>
+          <article class="evenementen-slider__item">
+            <div class="evenementen-slider__image">
+              <img src="images/camp.jpg" alt="mensen aan panorama met zonsondergang">
+            </div>
+            <div class="evenementen-slider__content">
+              <h2>Groot kamp</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
+              <a href="" class="button-link__blue">Lees meer...</a>
+            </div>  
+          </article>
+        </div>
         <span class="arrow-right"></span>
       </div>
     </article>
   </section>
   <footer>
-    <article class="container">
+    <section class="container">
       <h2>Interessante links</h2>
       <ul>
         <a href="">Evenementen</a>
@@ -91,7 +121,7 @@
         <a href="">Algemeen reglement</a>
         <a href="">Infobrief groot kamp</a>
       </ul>
-    </article>
+    </section>
     <div>
       <img src="images/logo.png" alt="logo scouts woudloper">
     </div>
