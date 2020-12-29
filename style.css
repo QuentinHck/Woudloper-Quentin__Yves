@@ -14,7 +14,7 @@ roboto bold weight: 700
 body,html{
   padding: 0;
   margin: 0;
-  background-color: #fff;
+  background-color: #0559D3;
 }
 
 body, p{
@@ -23,6 +23,11 @@ body, p{
   color: #003575;
 }
 
+p{
+  font-size: 15px;
+  line-height: 1.3em;
+  font-weight: 300;
+}
 
 body > header{
   height: 90vh;
@@ -54,7 +59,7 @@ body > section:nth-child(even){
   z-index: 0;
 }
 
-body > section:nth-child(3){
+body > section:nth-child(odd){
   padding: 5rem 0 8rem;
   margin-top: -4rem;
   margin-bottom: -5rem;
@@ -96,22 +101,31 @@ h2{
   box-shadow: 2px 2px 8px grey;
 }
 
-.button.button-link__blue{
-  background-color: #0559D3;
-  color: white;
-  
+.button-more{
+  font-size: .8rem;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: inline-block;
+  transition: background-color 0.3s;
 }
 
-.button.button-link__blue:hover{
+.button-link__blue{
+  background-color: #0559D3;
+  color: white;
+}
+
+.button-link__blue:hover{
   background-color: #003575;
 }
 
-.button.button.button-link__white{
+.button-link__white{
   color: #0559D3;
   background-color: white;
 }
 
-.button.button.button-link__white:hover{
+.button-link__white:hover{
   background-color: #0559D3;
   color: white;
 }
@@ -137,6 +151,9 @@ h2{
 .navigation-background__colored{
   background-color: rgba(255, 255, 255, 1);
   transition: all .3s ease-in-out;
+  box-shadow: 1px -7px 22px 0px rgba(5,89,211,0.87);
+  -webkit-box-shadow: 1px -7px 22px 0px rgba(5,89,211,0.87);
+  -moz-box-shadow: 1px -7px 22px 0px rgba(5,89,211,0.87);
 }
 
 nav{
@@ -410,34 +427,90 @@ table#calendar{
   padding: 1rem 0;
 }
 
-
-
-
 .container{
   width: 1200px;
   margin: auto;
 }
 
 
+
+
 .intro-content_text{
   display: flex;
   justify-content: space-between;
   line-height: 1.2em;
+  flex-wrap: wrap;
 }
 
 .intro-content_text p{
-  width: 30%;
+  flex: 1;
+  padding: 0 1em;
 }
 
-body:nth-last-child(1){
-  background-color: #0559D3;
-  padding: 0 ;
-  
+.intro-content_text p:first-child{
+  padding-left: 0;
 }
+
+.intro-content_text p:last-child{
+  padding-right: 0;
+}
+
+
+
+
+.nieuws-content__wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -1rem -1.5rem 0 -1.5rem;
+}
+
+.nieuws-content__item{
+  flex: 1;
+  min-width: 28%;
+  margin: 1rem 1.5rem 0px 1.5rem;
+  padding-bottom: 2em;
+  border-bottom: #0559D3 1px solid;
+  border-bottom-right-radius: 20px;
+}
+
+.nieuws-content__date{
+  font-size: .8em;
+  color: rgb(5, 89, 211);
+  font-weight: 500;
+  display: flex;
+  height: 25px;
+  align-items: center;
+}
+
+.nieuws-content__date img{
+  width: 20px;
+  height: 25px;
+  filter: invert(26%) sepia(98%) saturate(1493%) hue-rotate(199deg) brightness(89%) contrast(118%);
+}
+
+.nieuws-content__date p{
+  display: inline-block;
+  margin-left: 10px;
+  color: #0559D3;
+  font-weight: 500;
+}
+
+
+
+
 
 footer, footer h2, footer a{
   color: white;
   text-align: center;
+}
+
+footer{
+  position: relative;
+  z-index: 5;
+  padding-top: 4rem;
+  background-color: #0559D3;
+  clip-path: polygon(0 0, 100% 3vw, 100% 100%, 0 100%);
 }
 
 footer a{
@@ -484,14 +557,25 @@ footer div img{
 
 .evenementen-slider__item{
   width: 31%;
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+  padding-bottom: 3rem;
+  border-bottom: 3px solid #0559D3;
 }
 
 .evenementen-slider__image img{
   width: 100%;
+  margin-bottom: 1rem;
+}
+
+.evenementen-slider__content{
+  padding: 0 2em;
 }
 
 .evenementen-slider__content a{
-  margin-top: 1rem;
+  margin-top: 1em;
 }
 
 /*  ------------------ contact page ------------------*/
@@ -609,6 +693,16 @@ lg (for laptops and desktops - screens equal to or greater than 1200px wide)
   header #card-calendar{
     display: none;
   }
+
+  .nieuws-content__wrapper{
+    margin: 0;
+  }
+
+  .nieuws-content__item{
+    min-width: 100%;
+    text-align: left;
+    margin: 1em 0;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -646,6 +740,12 @@ lg (for laptops and desktops - screens equal to or greater than 1200px wide)
   }
   .container{
     width: 90%;
+  }
+  .intro-content_text p{
+    flex: auto;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
   .contact-content__text div{
     width: 100%;
