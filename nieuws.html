@@ -22,7 +22,7 @@
         <div class="dropdown-menu__list">
           <ul class="dropdown-menu__list-content">
             <a href="index.html"><li>Home</li></a>
-            <a href="event.html"><li>Evenementen</li></a>
+            <a href="evenementen.html"><li>Evenementen</li></a>
             <a href="nieuws.html" class="active"><li>Nieuws</li></a>
             <a href="contact.html"><li>Contact</li></a>
           </ul>
@@ -33,7 +33,7 @@
       <img src="images/logo.png" alt="logo scouts woudloper">
       <ul>
         <a href="index.html"><li>Home</li></a>
-        <a href="event.html"><li>Evenementen</li></a>
+        <a href="evenementen.html"><li>Evenementen</li></a>
         <a href="nieuws.html" class="active"><li>Nieuws</li></a>
         <a href="contact.html"><li>Contact</li></a>
       </ul>
@@ -42,7 +42,15 @@
   
   <header>
     <div class="container">
-      <a href="" class="button button-inschrijving button-link__blue">Wordt nu lid!</a>
+      <div class="signup-field container">
+        <a href="" class="button signup-field__button button-link__blue">Wordt nu lid!</a>
+          <form class="signup-field__form" name="signup-form" action="" method="GET">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Naam">
+            <input type="text" placeholder="Adres">
+            <input type="submit" value="Inschrijven">
+          </form>
+      </div>
       <a href="" class="button button-agenda button-link__white">Agenda</a>
       <div id="card-calendar">
         <h2 class="card-header" id="monthAndYear"></h2>
@@ -66,12 +74,12 @@
             <button class="nextBtn" onClick=calendarNext()><span></span></button>
           </div>
         </table>
-        
       </div>
+    </div>
     </div>
   </header>
   <section id="nieuws">
-    <article class="container">
+    <div class="container">
       <h1>Nieuws</h1>
       <div class="nieuws-content__wrapper">
         <div class="nieuws-content__item">
@@ -105,7 +113,7 @@
           <div class="nieuws-content__date"> <img src="images/icon-calendar.png" alt="icon of calendar"> <p>02.02.2020</p></div>
         </div>
       </div>
-    </article>
+    </div>
   </section>
   
   <footer>

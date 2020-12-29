@@ -43,6 +43,7 @@ body > header{
 }
 
 header .button{
+  margin: 0;
   margin-top:7rem ;
 }
 
@@ -326,18 +327,48 @@ nav ul{
 .dropdown-menu__list.show-dropdown{
   transform: translateX(0);
 }
+/*------- SIGN UP FORM --------*/
 
+.signup-field{
+  float: left;
+}
+
+.signup-field__form{
+  width: 300px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #0559D3;
+  position: absolute;
+  top: 9rem;
+  border-radius: 20px;
+}
+
+.signup-field__form input{
+  margin: 0.8em 0;
+  padding: 1em;
+  border-radius: 5px;
+  border: none;
+}
+
+.signup-field__form input[type=submit]{
+  background-color: #0559D3;
+  color: #FFF;
+  border: 2px solid #FFF;
+  text-transform: uppercase;
+}
 
 /* ------    CALENDAR  --------*/
 
 
 #card-calendar{
-  margin-top: 7rem;
   width: 500px;
   background-color: rgba(216,224,229,0.6);
   float: right;
   border-radius: 5%;
   position: relative;
+  margin-top: 7rem;
 }
 
 table#calendar{
@@ -371,14 +402,13 @@ table#calendar{
   position: absolute;
 }
 
-.calendar-buttons span{
+
+
+.previousBtn{
   display: block;
   width: 15px;
   height: 15px;
   background-color: #fff;
-}
-
-.calendar-buttons .previousBtn{
   top: calc(40% - 15px);
   left: -45px;
   width: 30px;
@@ -387,9 +417,14 @@ table#calendar{
   background-color:#0559D3;
   border: 0;
   border-radius: 50%;
+  
 }
 
-.calendar-buttons .nextBtn{
+.nextBtn{
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
   top: calc(40% - 15px);
   left: 515px;
   width: 30px;
@@ -400,14 +435,22 @@ table#calendar{
   border-radius: 50%;
 }
 
-.calendar-buttons .previousBtn span{
-  margin-left: -2px;
-  clip-path: polygon(35% 50%, 100% 0, 100% 100%);
-}
-
-.calendar-buttons .nextBtn span{
+.nextBtn span{
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
   margin-left: 5px;
   clip-path: polygon(65% 50%, 0 0, 0 100%);
+}
+
+.previousBtn span{
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  margin-left: -2px;
+  clip-path: polygon(35% 50%, 100% 0, 100% 100%);
 }
 
 #calendar-body{
@@ -548,11 +591,46 @@ footer div img{
   margin: auto;
 }
 
+
+
+/* ---------------- evenementen page ----------*/
+
+.evenementen-slider__main{
+  display: flex;
+  margin-bottom: 3rem;
+}
+
+.evenementen-slider__main-image{
+  flex: 1;
+  background-image: url(images/camp.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.evenementen-slider__main-content-text{
+  flex:1;
+  padding: 2rem;
+}
+
 /*  ------------------ slider evenementen ------------------*/
 
 .evenementen-slider__wrapper{
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+
+.evenementen-slider-buttons{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.evenementen-slider-buttons .nextBtn{
+  right:-45px;
+  left:auto;
 }
 
 .evenementen-slider__item{
