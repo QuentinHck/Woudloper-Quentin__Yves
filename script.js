@@ -75,30 +75,75 @@ function calendarNext(){
 const $dropdownContainer = document.querySelector('.dropdown-menu');
 const $dropdownHamburger = document.querySelector('.dropdown-menu__button');
 const $dropdownList = document.querySelector('.dropdown-menu__list');
+
+const $signupDropdownWrapper = document.querySelector('.signup-field__heading');
+const $signupDropdownButton = document.querySelector('.dropdown-aside__button');
+const $signupFieldForm = document.querySelector('.signup-field__form');
+
+const $agendaButton = document.querySelector('.agenda-field__heading');
+const $agendaDropdownButton = document.querySelector('.calendar-icon');
+const $agendaDropdownAfter = document.querySelector('.agenda-dropdown')
+const $cardCalendar = document.getElementById('card-calendar');
+
+
+let $navBar = document.getElementById('navigation');
+let $aside = document.querySelector('.signup-field');
+
 let menuOpen = false;
 
-$dropdownContainer.addEventListener('click', () => {
+function openDropdown(target1,target2){
   if(!menuOpen){
-    $dropdownContainer.classList.add('open');
-    $dropdownList.classList.add('show-dropdown');
+    target1.classList.add('open');
+    target2.classList.add('show-dropdown');
+    $aside.classList.remove('reduce');
     menuOpen = true;
+    
+    window.onscroll = function () {
+      target1.classList.remove('open');
+      target2.classList.remove('show-dropdown');
+      $aside.classList.add('reduce');
+      menuOpen = false;
+    }
   }else{
-    $dropdownContainer.classList.remove('open');
-    $dropdownList.classList.remove('show-dropdown');
+    target1.classList.remove('open');
+    target2.classList.remove('show-dropdown');
+    $aside.classList.add('reduce');
     menuOpen = false;
   }
-})
+}
+
+function dropDownEffect(event){
+  console.log(event.target);
+  if(event.target === $dropdownHamburger){
+    openDropdown($dropdownContainer,$dropdownList);
+  }else if(event.target === $signupDropdownWrapper || event.target === $signupDropdownButton){
+    openDropdown($signupDropdownButton, $signupFieldForm);
+  }else if(event.target === $agendaButton || event.target === $agendaDropdownButton || event.target === $agendaDropdownAfter){
+    openDropdown($agendaDropdownAfter,$cardCalendar);
+  }
+  //openDropdown($dropdownContainer,$dropdownList);
+}
 
 
-let myNav = document.getElementById('navigation');
 window.onscroll = function () { 
+  console.log(menuOpen);
     if (document.body.scrollTop >= 70 || document.documentElement.scrollTop >= 70 ) {
-        myNav.classList.remove("navigation-background__transparant");
-        myNav.classList.add("navigation-background__colored");
-        console.log('ok');
+      $navBar.classList.remove("navigation-background__transparant");
+      $navBar.classList.add("navigation-background__colored");  
+      $aside.classList.add('reduce');
     } 
-    else {
-      myNav.classList.remove("navigation-background__colored");
-      myNav.classList.add("navigation-background__transparant");
+    else if(document.documentElement.scrollTop < 70){
+      $navBar.classList.remove("navigation-background__colored");
+      $navBar.classList.add("navigation-background__transparant");
+      $aside.classList.remove('reduce');
     }
 };
+
+function checkReduce(){
+  if(!menuOpen  && !$aside.classList.contains('reduce')){
+    $aside.classList.remove('reduce');
+  }
+}
+
+document.addEventListener('click',dropDownEffect);
+window.addEventListener('scroll',checkReduce);

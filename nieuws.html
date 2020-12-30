@@ -39,19 +39,26 @@
       </ul>
     </nav>
   </div>
-  
-  <header>
-    <div class="container">
-      <div class="signup-field container">
-        <a href="" class="button signup-field__button button-link__blue">Wordt nu lid!</a>
-          <form class="signup-field__form" name="signup-form" action="" method="GET">
-            <input type="text" placeholder="Email">
-            <input type="text" placeholder="Naam">
-            <input type="text" placeholder="Adres">
-            <input type="submit" value="Inschrijven">
-          </form>
+  <aside class="signup-field">
+    <div class="aside__button signup-field__button button-link__blue">
+      <div class="aside__heading signup-field__heading">
+        <h2>Wordt nu lid!</h2>
+        <div class="dropdown-aside__button"></div>
       </div>
-      <a href="" class="button button-agenda button-link__white">Agenda</a>
+      <form class="signup-field__form" name="signup-form" action="" method="GET">
+        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Naam">
+        <input type="text" placeholder="Adres">
+        <input type="submit" value="Inschrijven">
+      </form>
+    </div>
+    <div class="aside__button button-agenda ">
+      <div class="aside__heading  agenda-field__heading">
+        <h2>Agenda</h2>
+        <div class="agenda-dropdown dropdown-aside__button">
+          <img class="calendar-icon" src="images/icon-calendar.svg" alt="icoon kalender">
+        </div>
+      </div>
       <div id="card-calendar">
         <h2 class="card-header" id="monthAndYear"></h2>
         <table class="table" id="calendar">
@@ -69,14 +76,14 @@
           <tbody id="calendar-body">
           </tbody>
           <div class="calendar-buttons">
-
             <button class="previousBtn" onClick=calendarPrev()><span></span></button>
             <button class="nextBtn" onClick=calendarNext()><span></span></button>
           </div>
         </table>
       </div>
     </div>
-    </div>
+  </aside>
+  <header>
   </header>
   <section id="nieuws">
     <div class="container">

@@ -52,7 +52,7 @@ header .button-agenda{
 }
 
 
-body > section:nth-child(even){
+body > section:nth-child(odd){
   clip-path: polygon(0 0, 100% 3vw, 100% calc(100% - 3vw), 0% 100%);
   padding: 4rem 0 7rem;
   background-color: #D8E0E5;
@@ -60,7 +60,7 @@ body > section:nth-child(even){
   z-index: 0;
 }
 
-body > section:nth-child(odd){
+body > section:nth-child(even){
   padding: 5rem 0 8rem;
   margin-top: -4rem;
   margin-bottom: -5rem;
@@ -90,6 +90,13 @@ h2{
   color: #0559D3;
 }
 
+aside{
+  transition: all .5s ease-in-out;
+}
+
+aside.reduce{
+  left: -14%;
+}
 
 .button{
   text-decoration: none;
@@ -99,7 +106,6 @@ h2{
   display: inline-block;
   transition: background-color 0.3s;
   margin: 0.5em;
-  box-shadow: 2px 2px 8px grey;
 }
 
 .button-more{
@@ -127,9 +133,20 @@ h2{
 }
 
 .button-link__white:hover{
-  background-color: #0559D3;
+  background-color:  #003575;
   color: white;
 }
+
+.aside__button{
+  padding: 1rem;
+  margin-top: 10px;
+  border-top-right-radius: 10px;
+  text-align: right;
+  transition: all .5s ease-in-out;
+}
+
+
+
 
 /*---------- NAVIGATION MENU --------------*/
 
@@ -251,7 +268,7 @@ nav ul{
   background-color: #0559D3;
   height: 4px;
   border-radius: 5px;
-  transition: all .5s ease-in-out;
+  transition: all .1s ease-in-out;
   z-index: 20;
 }
 
@@ -327,22 +344,72 @@ nav ul{
 .dropdown-menu__list.show-dropdown{
   transform: translateX(0);
 }
+
+
 /*------- SIGN UP FORM --------*/
 
+
+.aside__heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aside__heading  h2{
+  color: #fff;
+  margin:0;
+}
+
+.aside__button span{
+  display: inline-block;
+}
+.dropdown-aside__button{
+  width: 30px;
+  background-color: #fff;
+  height: 4px;
+  border-radius: 5px;
+  top: 10px;
+  transition: all .5s ease-in-out;
+  position: relative;
+}
+
+.dropdown-aside__button::before,
+.dropdown-aside__button::after{
+  content: '';
+  position: absolute;
+  width: 30px;
+  background-color: #fff;
+  height: 4px;
+  border-radius: 5px;
+  left: 0;
+  transition: all .5s ease-in-out;
+}
+
+.dropdown-aside__button::before{
+  transform: translateY(-8px);
+}
+
+.dropdown-aside__button::after{
+  transform: translateY(8px);
+}
+
 .signup-field{
-  float: left;
+  position: fixed;
+  left: 0;
+  top: 100px;
+  z-index: 100;
 }
 
 .signup-field__form{
-  width: 300px;
-  float: left;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  background-color: #0559D3;
-  position: absolute;
-  top: 9rem;
+  overflow:hidden;
+  height: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 0rem;
+  position: relative;
   border-radius: 20px;
+  transition: all .5s ease-in-out;
 }
 
 .signup-field__form input{
@@ -359,16 +426,112 @@ nav ul{
   text-transform: uppercase;
 }
 
+
+
+/* ANIMATION */
+
+.dropdown-aside__button.open{
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.dropdown-aside__button.open::before{
+  transform:rotate(45deg) translate(35px,-35px);
+  background-color: #FFF;
+}
+
+.dropdown-aside__button.open::after{
+  transform:rotate(-45deg) translate(35px,35px);
+  background-color: #FFF;
+}
+
+.signup-field__form.show-dropdown {
+  height: 30vh;
+}
+
+
+
+
 /* ------    CALENDAR  --------*/
 
+.button-agenda{
+  background-color: #fff;
+}
+
+.button-agenda:hover{
+  background-color:  #003575;
+}
+
+.button-agenda:hover .agenda-field__heading,
+.button-agenda:hover .agenda-field__heading h2{
+  color: #fff;
+}
+
+.button-agenda .agenda-field__heading h2{
+  color: #0559D3;;
+}
+
+
+.button-agenda .dropdown-aside__button::before,
+.button-agenda .dropdown-aside__button::after{
+  background-color: transparent;
+}
+
+.aside-heading:hover .dropdown-aside__button::before,
+.aside-heading:hover .dropdown-aside__button::after{
+  background-color: transparent;
+}
+
+.agenda-dropdown.open .calendar-icon{
+  transition: .5s ease-in-out all;
+  opacity: 0;
+  background-color: transparent;
+}
+.agenda-dropdown.open::before,
+.agenda-dropdown.open::after{
+  background-color: #0559D3;
+}
+
+.button-agenda:hover .agenda-dropdown.open::after,
+.button-agenda:hover .agenda-dropdown.open::before{
+  background-color: #fff;
+}
+
+.agenda-field__heading .dropdown-aside__button{
+  width: 30px;
+  transition: all .5s ease-in-out;
+  position: relative;
+  background-color: transparent;
+}
+
+.agenda-field__heading .calendar-icon{
+  width: 100%;
+  transform: translateY(-8px);
+  filter: invert(26%) sepia(98%) saturate(1493%) hue-rotate(199deg) brightness(89%) contrast(118%);
+}
+
+.button-agenda:hover .calendar-icon{
+  filter: invert(100);
+}
+
+
+#card-calendar
+,.button-agenda:hover #card-calendar{
+  background-color: white;
+}
 
 #card-calendar{
-  width: 500px;
-  background-color: rgba(216,224,229,0.6);
-  float: right;
-  border-radius: 5%;
-  position: relative;
-  margin-top: 7rem;
+  width: 400px;
+  position: absolute;
+  margin-top: 1rem;
+  left: -400px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: all .5s ease-in-out;
+}
+
+#card-calendar.show-dropdown{
+  left: 0;
 }
 
 table#calendar{
@@ -381,13 +544,15 @@ table#calendar{
 }
 
 #card-calendar thead{
-  width: 100%;
-  display: inline-block;
+  width: 84%;
+  margin: auto;
+  display:block;
 }
 
 #card-calendar thead tr{
   width: 100%;
-  display: block;
+  display: flex;
+  text-align: center;
 }
 
 #card-calendar thead th{
@@ -402,17 +567,13 @@ table#calendar{
   position: absolute;
 }
 
-
-
 .previousBtn{
   display: block;
-  width: 15px;
-  height: 15px;
   background-color: #fff;
   top: calc(40% - 15px);
-  left: -45px;
-  width: 30px;
-  height: 30px;
+  left: 10px;
+  width: 22px;
+  height: 22px;
   position: absolute;
   background-color:#0559D3;
   border: 0;
@@ -422,13 +583,11 @@ table#calendar{
 
 .nextBtn{
   display: block;
-  width: 15px;
-  height: 15px;
   background-color: #fff;
   top: calc(40% - 15px);
-  left: 515px;
-  width: 30px;
-  height: 30px;
+  left: calc(100% - 30px);
+  width: 22px;
+  height: 22px;
   position: absolute;
   background-color:#0559D3;
   border: 0;
@@ -437,25 +596,26 @@ table#calendar{
 
 .nextBtn span{
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 11px;
+  height: 11px;
   background-color: #fff;
-  margin-left: 5px;
+  margin-left: 3px;
   clip-path: polygon(65% 50%, 0 0, 0 100%);
 }
 
 .previousBtn span{
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 11px;
+  height: 11px;
   background-color: #fff;
-  margin-left: -2px;
+  margin-left: -3px;
   clip-path: polygon(35% 50%, 100% 0, 100% 100%);
 }
 
 #calendar-body{
   display: block;
-  width: 100%;
+  width: 84%;
+  margin: auto;
 }
 
 #calendar-body tr{
