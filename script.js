@@ -131,19 +131,17 @@ window.onscroll = function () {
       $navBar.classList.remove("navigation-background__transparant");
       $navBar.classList.add("navigation-background__colored");  
       $aside.classList.add('reduce');
+      if(!menuOpen  && !$aside.classList.contains('reduce')){
+        $aside.classList.remove('reduce');
+      }
     } 
     else if(document.documentElement.scrollTop < 70){
       $navBar.classList.remove("navigation-background__colored");
       $navBar.classList.add("navigation-background__transparant");
       $aside.classList.remove('reduce');
     }
+    
 };
 
-function checkReduce(){
-  if(!menuOpen  && !$aside.classList.contains('reduce')){
-    $aside.classList.remove('reduce');
-  }
-}
 
 document.addEventListener('click',dropDownEffect);
-window.addEventListener('scroll',checkReduce);
