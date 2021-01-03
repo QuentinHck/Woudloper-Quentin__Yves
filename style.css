@@ -784,26 +784,42 @@ footer div img{
 /*  ------------------ slider evenementen ------------------*/
 
 .evenementen-slider__wrapper{
-  display: flex;
-  justify-content: space-between;
   position: relative;
+}
+
+.evenementen-slider__subcontainer{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+.evenementen-slider__frame{
+  justify-content: space-between;
+  position: absolute;
+  width: 99999px;
 }
 
 .evenementen-slider-buttons{
   position: absolute;
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: space-between;
+  top: 50%;
 }
 
-.evenementen-slider-buttons .nextBtn{
+.evenementen-slider-buttons__left{
+  left: -45px;
+}
+
+.evenementen-slider-buttons__right{
   right:-45px;
   left:auto;
 }
 
 .evenementen-slider__item{
-  width: 31%;
+  width: calc(1200px / 3);
+  float: left;
   background-color: white;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;

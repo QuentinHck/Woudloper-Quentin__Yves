@@ -101,12 +101,13 @@ function openDropdown(target1,target2){
     target1.classList.remove('open');
     target2.classList.remove('show-dropdown');
     menuOpen = false;
-  }else if(window.onscroll){
+  }
+  /*else if(window.onscroll && menuOpen){
     target1.classList.remove('open');
     target2.classList.remove('show-dropdown');
     $aside.classList.add('reduce');
     menuOpen = false;
-  }else{
+  }*/else{
     $aside.classList.add('reduce');
   }
 }
@@ -146,9 +147,9 @@ document.addEventListener('click',dropDownEffect);
 
 /*--------------------SLIDER------------------*/
 
-const previousBtn = document.querySelector(".sliderPreviousBtn");
-const nextBtn = document.querySelector(".sliderNextBtn");
-const sliderContainer = document.querySelector(".evenementen-slider__wrapper");
+const previousBtn = document.querySelector(".evenementen-slider-buttons__left");
+const nextBtn = document.querySelector(".evenementen-slider-buttons__right");
+const sliderContainer = document.querySelector(".evenementen-slider__frame");
 const slider = document.querySelector(".evenementen-slider__wrapper");
 
 let sliderInfo = {
@@ -170,7 +171,7 @@ function setSliderPosition() {
 }
 
 function getShownItems() {
-  const container = document.querySelector(".subcontainerSlider");
+  const container = document.querySelector(".evenementen-slider__subcontainer");
 
   return Math.floor(container.clientWidth / getSliderItemWidth());
 }
