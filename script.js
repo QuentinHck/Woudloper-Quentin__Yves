@@ -92,23 +92,22 @@ let $aside = document.querySelector('.signup-field');
 let menuOpen = false;
 
 function openDropdown(target1,target2){
-  if(!menuOpen){
+  if(!menuOpen ){
     target1.classList.add('open');
     target2.classList.add('show-dropdown');
     $aside.classList.remove('reduce');
     menuOpen = true;
-    
-    window.onscroll = function () {
-      target1.classList.remove('open');
-      target2.classList.remove('show-dropdown');
-      $aside.classList.add('reduce');
-      menuOpen = false;
-    }
-  }else{
+  }else if( menuOpen && document.documentElement.scrollTop >= 70){
+    target1.classList.remove('open');
+    target2.classList.remove('show-dropdown');
+    menuOpen = false;
+  }else if(window.onscroll){
     target1.classList.remove('open');
     target2.classList.remove('show-dropdown');
     $aside.classList.add('reduce');
     menuOpen = false;
+  }else{
+    $aside.classList.add('reduce');
   }
 }
 
