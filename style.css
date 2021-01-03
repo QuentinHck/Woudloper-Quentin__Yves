@@ -791,7 +791,7 @@ footer div img{
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 520px;
 }
 
 .evenementen-slider__frame{
@@ -818,7 +818,8 @@ footer div img{
 }
 
 .evenementen-slider__item{
-  width: calc(1200px / 3);
+  width: calc((1200px / 3) - 2em);
+  margin: 1em;
   float: left;
   background-color: white;
   border-top-right-radius: 20px;
@@ -826,6 +827,9 @@ footer div img{
   overflow: hidden;
   padding-bottom: 3rem;
   border-bottom: 3px solid #0559D3;
+}
+.evenementen-slider__item:first-child{
+  margin-left: 0;
 }
 
 .evenementen-slider__image img{
