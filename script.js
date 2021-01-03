@@ -225,6 +225,8 @@ function windowResize() {
   }
 }
 
+/*----- event listeners----*/
+
 previousBtn.addEventListener("click", previousSlide);
 nextBtn.addEventListener("click", nextSlide);
 window.addEventListener("resize", windowResize);
