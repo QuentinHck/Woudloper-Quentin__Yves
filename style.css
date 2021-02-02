@@ -828,9 +828,6 @@ footer div img{
   padding-bottom: 3rem;
   border-bottom: 3px solid #0559D3;
 }
-.evenementen-slider__item:first-child{
-  margin-left: 0;
-}
 
 .evenementen-slider__image img{
   width: 100%;
