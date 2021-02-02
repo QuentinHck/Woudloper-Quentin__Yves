@@ -69,6 +69,6 @@ export default {
 
 <style lang="scss">
 #navigation {
-  background-color: #fff;
+  background-color: $blue;
 }
 </style>
