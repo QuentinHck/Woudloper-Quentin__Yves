@@ -1,26 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 * {
   box-sizing: border-box;
   border-spacing: 0;
 }
+
 /* 
 roboto light weight: 300
 roboto regular weight: 400
 roboto medium weight: 500
 roboto bold weight: 700
-
 */
 
 body,
 html {
   padding: 0;
   margin: 0;
-  background-color: red;
+  background-color: #0559D3;
 }
 
 body,
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: #003575;
 }
@@ -31,10 +32,10 @@ p {
   font-weight: 300;
 }
 
-body > header {
+body>header {
   height: 90vh;
   width: 100vw;
-  background-image: url("images/background.jpg");
+  background-image: url('images/background.jpg');
   background-position: center;
   background-size: cover;
   padding: 0 0 7rem;
@@ -53,15 +54,16 @@ header .button-agenda {
   display: none;
 }
 
-body > section:nth-child(odd) {
+
+body>section:nth-child(odd) {
   clip-path: polygon(0 0, 100% 3vw, 100% calc(100% - 3vw), 0% 100%);
   padding: 4rem 0 7rem;
-  background-color: #d8e0e5;
+  background-color: #D8E0E5;
   position: relative;
   z-index: 0;
 }
 
-body > section:nth-child(even) {
+body>section:nth-child(even) {
   padding: 5rem 0 8rem;
   margin-top: -4rem;
   margin-bottom: -5rem;
@@ -81,18 +83,18 @@ body > section:nth-child(even) {
 h1 {
   font-weight: 300;
   font-size: 30px;
-  color: #0559d3;
+  color: #0559D3;
   text-decoration: underline;
 }
 
 h2 {
   font-weight: 500;
   font-size: 20px;
-  color: #0559d3;
+  color: #0559D3;
 }
 
 aside {
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 aside.reduce {
@@ -110,7 +112,7 @@ aside.reduce {
 }
 
 .button-more {
-  font-size: 0.8rem;
+  font-size: .8rem;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -120,7 +122,7 @@ aside.reduce {
 }
 
 .button-link__blue {
-  background-color: #0559d3;
+  background-color: #0559D3;
   color: white;
 }
 
@@ -129,7 +131,7 @@ aside.reduce {
 }
 
 .button-link__white {
-  color: #0559d3;
+  color: #0559D3;
   background-color: white;
 }
 
@@ -143,8 +145,11 @@ aside.reduce {
   margin-top: 10px;
   border-top-right-radius: 10px;
   text-align: right;
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
+
+
+
 
 /*---------- NAVIGATION MENU --------------*/
 
@@ -161,12 +166,12 @@ aside.reduce {
 
 .navigation-background__transparant {
   background-color: rgba(255, 255, 255, 0);
-  transition: all 0.3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .navigation-background__colored {
   background-color: rgba(255, 255, 255, 1);
-  transition: all 0.3s ease-in-out;
+  transition: all .3s ease-in-out;
   box-shadow: 1px -7px 22px 0px rgba(5, 89, 211, 0.87);
   -webkit-box-shadow: 1px -7px 22px 0px rgba(5, 89, 211, 0.87);
   -moz-box-shadow: 1px -7px 22px 0px rgba(5, 89, 211, 0.87);
@@ -190,6 +195,7 @@ nav a {
   position: relative;
 }
 
+
 nav a.active::after {
   position: absolute;
   top: 100%;
@@ -197,7 +203,7 @@ nav a.active::after {
   width: 100%;
   height: 2px;
   background: rgba(5, 90, 211, 1);
-  content: "";
+  content: '';
   opacity: 1;
 }
 
@@ -208,7 +214,7 @@ nav a::after {
   width: 100%;
   height: 2px;
   background: rgba(5, 90, 211, 1);
-  content: "";
+  content: '';
   opacity: 0;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   -moz-transition: opacity 0.3s, -moz-transform 0.3s;
@@ -225,6 +231,7 @@ nav a:focus::after {
   -moz-transform: translateY(0px);
   transform: translateY(0px);
 }
+
 
 nav ul {
   display: flex;
@@ -261,22 +268,22 @@ nav ul {
 
 .dropdown-menu__button {
   width: 30px;
-  background-color: #0559d3;
+  background-color: #0559D3;
   height: 4px;
   border-radius: 5px;
-  transition: all 0.1s ease-in-out;
+  transition: all .1s ease-in-out;
   z-index: 20;
 }
 
 .dropdown-menu__button::before,
 .dropdown-menu__button::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 30px;
-  background-color: #0559d3;
+  background-color: #0559D3;
   height: 4px;
   border-radius: 5px;
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .dropdown-menu__button::before {
@@ -294,7 +301,7 @@ nav ul {
   height: 100vh;
   right: 0;
   top: 0;
-  background-color: #0559d3;
+  background-color: #0559D3;
   transform: translateX(100%);
   transition: transform 0.3s ease;
   margin: 0;
@@ -316,10 +323,11 @@ nav ul {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  color: #fff;
+  color: #FFF;
   padding: 0 3em;
   font-size: 1.5em;
 }
+
 /* ANIMATION  */
 
 .dropdown-menu.open .dropdown-menu__button {
@@ -329,19 +337,21 @@ nav ul {
 
 .dropdown-menu.open .dropdown-menu__button::before {
   transform: rotate(45deg) translate(35px, -35px);
-  background-color: #fff;
+  background-color: #FFF;
 }
 
 .dropdown-menu.open .dropdown-menu__button::after {
   transform: rotate(-45deg) translate(35px, 35px);
-  background-color: #fff;
+  background-color: #FFF;
 }
 
 .dropdown-menu__list.show-dropdown {
   transform: translateX(0);
 }
 
+
 /*------- SIGN UP FORM --------*/
+
 
 .aside__heading {
   display: flex;
@@ -362,26 +372,27 @@ nav ul {
 .aside__button span {
   display: inline-block;
 }
+
 .dropdown-aside__button {
   width: 30px;
   background-color: #fff;
   height: 4px;
   border-radius: 5px;
   top: 10px;
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
   position: relative;
 }
 
 .dropdown-aside__button::before,
 .dropdown-aside__button::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 30px;
   background-color: #fff;
   height: 4px;
   border-radius: 5px;
   left: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .dropdown-aside__button::before {
@@ -408,13 +419,13 @@ nav ul {
   flex-direction: column;
   padding: 0rem;
   position: relative;
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .signup-field__form input {
   /*padding: 1em;*/
   border: none;
-  border-bottom: solid 1px #0559d3;
+  border-bottom: solid 1px #0559D3;
   flex: 1;
 }
 
@@ -422,12 +433,14 @@ nav ul {
   margin-top: 1em;
 }
 
-.signup-field__form input[type="submit"] {
+.signup-field__form input[type=submit] {
   background-color: #fff;
-  color: #0559d3;
-  border: 2px solid #fff;
+  color: #0559D3;
+  border: 2px solid #FFF;
   text-transform: uppercase;
 }
+
+
 
 /* ANIMATION */
 
@@ -438,17 +451,20 @@ nav ul {
 
 .dropdown-aside__button.open::before {
   transform: rotate(45deg) translate(35px, -35px);
-  background-color: #fff;
+  background-color: #FFF;
 }
 
 .dropdown-aside__button.open::after {
   transform: rotate(-45deg) translate(35px, 35px);
-  background-color: #fff;
+  background-color: #FFF;
 }
 
 .signup-field__form.show-dropdown {
   height: 30vh;
 }
+
+
+
 
 /* ------    CALENDAR  --------*/
 
@@ -466,8 +482,10 @@ nav ul {
 }
 
 .button-agenda .agenda-field__heading h2 {
-  color: #0559d3;
+  color: #0559D3;
+  ;
 }
+
 
 .button-agenda .dropdown-aside__button::before,
 .button-agenda .dropdown-aside__button::after {
@@ -480,13 +498,14 @@ nav ul {
 }
 
 .agenda-dropdown.open .calendar-icon {
-  transition: 0.5s ease-in-out all;
+  transition: .5s ease-in-out all;
   opacity: 0;
   background-color: transparent;
 }
+
 .agenda-dropdown.open::before,
 .agenda-dropdown.open::after {
-  background-color: #0559d3;
+  background-color: #0559D3;
 }
 
 .button-agenda:hover .agenda-dropdown.open::after,
@@ -496,7 +515,7 @@ nav ul {
 
 .agenda-field__heading .dropdown-aside__button {
   width: 30px;
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
   position: relative;
   background-color: transparent;
 }
@@ -504,13 +523,13 @@ nav ul {
 .agenda-field__heading .calendar-icon {
   width: 100%;
   transform: translateY(-8px);
-  filter: invert(26%) sepia(98%) saturate(1493%) hue-rotate(199deg)
-    brightness(89%) contrast(118%);
+  filter: invert(26%) sepia(98%) saturate(1493%) hue-rotate(199deg) brightness(89%) contrast(118%);
 }
 
 .button-agenda:hover .calendar-icon {
   filter: invert(100);
 }
+
 
 #card-calendar,
 .button-agenda:hover #card-calendar {
@@ -524,7 +543,7 @@ nav ul {
   left: -400px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 #card-calendar.show-dropdown {
@@ -572,9 +591,10 @@ table#calendar {
   width: 22px;
   height: 22px;
   position: absolute;
-  background-color: #0559d3;
+  background-color: #0559D3;
   border: 0;
   border-radius: 50%;
+
 }
 
 .nextBtn {
@@ -585,7 +605,7 @@ table#calendar {
   width: 22px;
   height: 22px;
   position: absolute;
-  background-color: #0559d3;
+  background-color: #0559D3;
   border: 0;
   border-radius: 50%;
 }
@@ -631,6 +651,9 @@ table#calendar {
   margin: auto;
 }
 
+
+
+
 .intro-content_text {
   display: flex;
   justify-content: space-between;
@@ -651,6 +674,9 @@ table#calendar {
   padding-right: 0;
 }
 
+
+
+
 .nieuws-content__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -663,12 +689,12 @@ table#calendar {
   min-width: 28%;
   margin: 1rem 1.5rem 0px 1.5rem;
   padding-bottom: 2em;
-  border-bottom: #0559d3 1px solid;
+  border-bottom: #0559D3 1px solid;
   border-bottom-right-radius: 20px;
 }
 
 .nieuws-content__date {
-  font-size: 0.8em;
+  font-size: .8em;
   color: rgb(5, 89, 211);
   font-weight: 500;
   display: flex;
@@ -679,16 +705,19 @@ table#calendar {
 .nieuws-content__date img {
   width: 20px;
   height: 25px;
-  filter: invert(26%) sepia(98%) saturate(1493%) hue-rotate(199deg)
-    brightness(89%) contrast(118%);
+  filter: invert(26%) sepia(98%) saturate(1493%) hue-rotate(199deg) brightness(89%) contrast(118%);
 }
 
 .nieuws-content__date p {
   display: inline-block;
   margin-left: 10px;
-  color: #0559d3;
+  color: #0559D3;
   font-weight: 500;
 }
+
+
+
+
 
 footer,
 footer h2,
@@ -701,7 +730,7 @@ footer {
   position: relative;
   z-index: 5;
   padding-top: 4rem;
-  background-color: #0559d3;
+  background-color: #0559D3;
   clip-path: polygon(0 0, 100% 3vw, 100% 100%, 0 100%);
 }
 
@@ -731,6 +760,7 @@ footer div {
   background-color: white;
   display: flex;
   margin-top: 3rem;
+
 }
 
 footer div img {
@@ -738,6 +768,8 @@ footer div img {
   height: 70%;
   margin: auto;
 }
+
+
 
 /* ---------------- evenementen page ----------*/
 
@@ -803,10 +835,7 @@ footer div img {
   border-bottom-left-radius: 20px;
   overflow: hidden;
   padding-bottom: 3rem;
-  border-bottom: 3px solid #0559d3;
-}
-.evenementen-slider__item:first-child {
-  margin-left: 0;
+  border-bottom: 3px solid #0559D3;
 }
 
 .evenementen-slider__image img {
@@ -869,22 +898,22 @@ footer div img {
 #contact-form form input {
   height: 2.5em;
   margin: 1em 0;
-  background-color: #d8e0e5;
+  background-color: #D8E0E5;
   border: none;
-  border-bottom: 1px solid #0559d3;
+  border-bottom: 1px solid #0559D3;
 }
 
 #contact-form form input:focus {
   padding-bottom: 2px;
   outline: none;
-  border-bottom: 2px solid #0559d3;
+  border-bottom: 2px solid #0559D3;
 }
 
 #contact-form form input[type="submit"] {
   margin-top: 2.5em;
   height: 3rem;
   line-height: 2em;
-  background-color: #0559d3;
+  background-color: #0559D3;
   color: white;
   text-transform: uppercase;
   border-radius: 10px;
@@ -893,13 +922,11 @@ footer div img {
 /* media queries ---------------------------------------------- /*
 /*
 xs (for phones - screens less than 768px wide)
-
 sm (for tablets - screens equal to or greater than 768px wide)
-
 md (for small laptops - screens equal to or greater than 992px wide)
-
 lg (for laptops and desktops - screens equal to or greater than 1200px wide)
 */
+
 
 @media screen and (max-width: 1280px) {
   .container {
@@ -911,6 +938,7 @@ lg (for laptops and desktops - screens equal to or greater than 1200px wide)
   .container {
     width: 768px;
   }
+
   #contact-form form {
     width: 65%;
   }
@@ -947,29 +975,31 @@ lg (for laptops and desktops - screens equal to or greater than 1200px wide)
     margin: 1em 0;
   }
 }
-.evenementen-slider__main-image {
-  margin: 0 auto;
-}
 
 @media screen and (max-width: 700px) {
   .intro-content_text {
     display: flex;
     flex-wrap: wrap;
   }
+
   .intro-content_text p {
     width: 100%;
   }
+
   .contact-content__text {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
   }
+
   .contact-content__text h1 {
     width: 100%;
   }
+
   .contact-content__text div {
     flex: 1;
   }
+
   #contact-content .contact-content__map {
     width: 100%;
     height: 300px;
@@ -981,63 +1011,35 @@ lg (for laptops and desktops - screens equal to or greater than 1200px wide)
 }
 
 @media screen and (max-width: 570px) {
+
   h1,
   h2,
   p {
     text-align: center;
   }
+
   .container {
     width: 90%;
   }
+
   .intro-content_text p {
     flex: auto;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
+
   .contact-content__text div {
     width: 100%;
     flex: none;
     margin-top: 1em;
   }
+
   #contact-form form {
     width: 100%;
   }
+
   footer a {
     width: 100%;
-  }
-  .evenementen-slider__main {
-    display: flex;
-    flex-direction: column;
-    height: 800px;
-    margin: 0 auto;
-  }
-  .evenementen-slider__main-image {
-    height: 600px;
-    width: 428px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-  }
-  .evenementen-slider__main-content-text_filter {
-    display: flex;
-    justify-content: center;
-  }
-  .evenementen-slider-buttons {
-    position: absolute;
-
-    display: flex;
-
-    top: 100%;
-  }
-  .evenementen-slider-buttons__right {
-    right: 90px;
-    left: auto;
-  }
-  .evenementen-slider-buttons__left {
-    left: 90px;
-  }
-  .evenementen-slider__content a {
-    margin-top: 1em;
   }
 }
