@@ -1,4 +1,5 @@
 <template>
+<div>
   <article class="evenementen-slider__item">
     <div class="evenementen-slider__image">
       <img :src="imageSrc" >
@@ -9,6 +10,7 @@
       <a href="" class="button-more button-link__blue">Lees meer...</a>
     </div>  
   </article>
+  </div>
 </template>
 
 <script>
