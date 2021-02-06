@@ -1,11 +1,13 @@
-import { createRouter, createWebHistory } from "vue-router";
+import {
+  createRouter,
+  createWebHistory
+} from "vue-router";
 import Index from "@/views/Index"
 import Evenementen from "@/views/Evenementen"
 import Nieuws from "@/views/Nieuws"
 import Contact from "@/views/Contact"
 
-const routes = [
-  {
+const routes = [{
     path: "/",
     name: "Index",
     component: Index

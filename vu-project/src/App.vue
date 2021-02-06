@@ -1,4 +1,4 @@
-<template>
+<!--<template>
 <div>
   <div id="navigation" class="navigation-background__transparant">
     <div class="dropdown__navbar container">
@@ -39,4 +39,21 @@ export default {
 </script>
 
 <style>
-</style>
+</style> -->
+
+<template>
+<div>
+  <Header />
+  <router-view />
+  </div>
+</template>
+
+<script>
+import Header from "@/components/Header";
+export default {
+  name: "app",
+  components: { Header },
+};
+</script>
+
+<style></style>
