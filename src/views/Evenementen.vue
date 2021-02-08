@@ -1,59 +1,10 @@
 <template>
-  <aside class="signup-field">
-    <div class="aside__button signup-field__button button-link__blue">
-      <div class="aside__heading signup-field__heading">
-        <h2>Wordt nu lid!</h2>
-        <div class="dropdown-aside__button"></div>
-      </div>
-      <form
-        class="signup-field__form"
-        name="signup-form"
-        action=""
-        method="GET"
-      >
-        <input type="text" placeholder="Email" />
-        <input type="text" placeholder="Naam" />
-        <input type="text" placeholder="Adres" />
-        <input type="submit" value="Inschrijven" />
-      </form>
-    </div>
-    <div class="aside__button button-agenda ">
-      <div class="aside__heading  agenda-field__heading">
-        <h2>Agenda</h2>
-        <div class="agenda-dropdown dropdown-aside__button">
-          <img
-            class="calendar-icon"
-            src="../assets/images/icon-calendar.svg"
-            alt="icoon kalender"
-          />
-        </div>
-      </div>
-      <div id="card-calendar">
-        <h2 class="card-header" id="monthAndYear"></h2>
-        <table class="table" id="calendar">
-          <thead>
-            <tr>
-              <th>Zo</th>
-              <th>Ma</th>
-              <th>Di</th>
-              <th>Wo</th>
-              <th>Do</th>
-              <th>Vr</th>
-              <th>Za</th>
-            </tr>
-          </thead>
-          <tbody id="calendar-body"></tbody>
-          <div class="calendar-buttons">
-            <button class="previousBtn" onClick="calendarPrev()">
-              <span></span>
-            </button>
-            <button class="nextBtn" onClick="calendarNext()">
-              <span></span>
-            </button>
-          </div>
-        </table>
-      </div>
-    </div>
+  <aside
+    class="
+  signup-field
+  "
+  >
+    <AsideBtns />
   </aside>
   <div class="hero"></div>
   <section id="evenementen">
@@ -129,14 +80,17 @@
 
 <script>
 import Event from '@/components/Event';
+import AsideBtns from '@/components/AsideBtns';
 
 export default {
   name: 'evenementen',
   components: {
     Event,
+    AsideBtns,
   },
   data() {
     return {
+      scrollIndex: null,
       events: [
         {
           id: 1,
@@ -147,14 +101,14 @@ export default {
         },
         {
           id: 2,
-          image: 'camp.jpg',
+          image: 'scouts2.jpg',
           title: 'Bivak',
           shortText:
             'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
         },
         {
           id: 3,
-          image: 'camp.jpg',
+          image: 'scouts1.jpg',
           title: 'Klein kamp',
           shortText:
             'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',

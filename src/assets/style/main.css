@@ -94,8 +94,8 @@ aside{
   transition: all .5s ease-in-out;
 }
 
-aside.reduce{
-  left: -180px;
+.reduce{
+  transform: translateX(-190px)
 }
 
 .button{
@@ -177,7 +177,7 @@ nav{
 }
 
 nav img{
-  height: 100%;
+  height: 90%;
 }
 
 nav a{
@@ -398,7 +398,7 @@ nav ul{
   position: fixed;
   left: 0;
   top: 100px;
-  z-index: 100;
+  z-index: 6;
   width: 250px;
 }
 

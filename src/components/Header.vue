@@ -5,11 +5,22 @@
   >
     <div class="dropdown__navbar container">
       <img src="@/assets/images/logo.png" alt="logo scouts woudloper" />
-      <div class="dropdown-menu">
+      <div
+        @click="openDropdown"
+        :class="{
+          'dropdown-menu': true,
+          open: dropdownOpen,
+        }"
+      >
         <div class="dropdown-menu__button-container">
           <div class="dropdown-menu__button"></div>
         </div>
-        <div class="dropdown-menu__list">
+        <div
+          :class="{
+            'dropdown-menu__list': true,
+            'show-dropdown': dropdownOpen,
+          }"
+        >
           <ul class="dropdown-menu__list-content">
             <li v-for="navLink in navLinks" :key="navLink.path">
               <router-link
@@ -43,6 +54,7 @@ export default {
   data() {
     return {
       scrollIndex: null,
+      dropdownOpen: false,
       navLinks: [
         { label: 'Home', path: '/' },
         { label: 'Evenementen', path: '/evenementen/' },
@@ -54,6 +66,9 @@ export default {
   methods: {
     updateScroll() {
       this.scrollIndex = window.scrollY;
+    },
+    openDropdown() {
+      this.dropdownOpen = !this.dropdownOpen;
     },
   },
   mounted() {
