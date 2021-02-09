@@ -99,14 +99,14 @@ export default {
         },
         {
           id: 2,
-          image: 'scouts.jpg',
+          image: 'scouts2.jpg',
           title: 'Bivak',
           shortText:
             'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
         },
         {
           id: 3,
-          image: 'scouts2.jpg',
+          image: 'scouts1.jpg',
           title: 'Klein kamp',
           shortText:
             'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',

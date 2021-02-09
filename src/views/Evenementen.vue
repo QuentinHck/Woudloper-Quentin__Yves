@@ -15,7 +15,7 @@
           <div class="evenementen-slider__main-image"></div>
           <div class="evenementen-slider__main-content-text">
             <div>
-              <h1>Groot kamp</h1>
+              <h1>{{ this.events[1].title }}</h1>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
                 rerum perspiciatis in nostrum architecto ut expedita beatae,
