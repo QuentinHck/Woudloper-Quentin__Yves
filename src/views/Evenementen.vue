@@ -16,7 +16,7 @@
           <div class="evenementen-slider__main-content-text">
             <div>
               <MainEvent
-                :id="myMainEvent"
+                v-if="myMainEvent"
                 :heading="events.title"
                 :bodyText="events.bodyText"
               />
@@ -123,9 +123,7 @@ export default {
   },
   computed: {
     myMainEvent() {
-      return this.events.find(
-        event => this.$route.params.eventid === parseFloat(event.id)
-      );
+      return this.events.find(event => event.id === this.$route.params.eventid);
     },
   },
 };
