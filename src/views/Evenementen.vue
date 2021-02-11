@@ -15,24 +15,11 @@
           <div class="evenementen-slider__main-image"></div>
           <div class="evenementen-slider__main-content-text">
             <div>
-              <h1>{{ this.events[1].title }}</h1>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
-                rerum perspiciatis in nostrum architecto ut expedita beatae,
-                facere quasi nam impedit repudiandae quidem voluptatum vero.
-                Voluptatibus odit nulla error iste?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolorem optio ad accusamus consequuntur maiores minima
-                perspiciatis id ut. Dignissimos assumenda quia harum ipsum illo
-                repellendus autem corporis ea blanditiis nulla!
-              </p>
-              <h2>Voor wie?</h2>
-              <div class="evenementen-slider__main-content-text_filter">
-                <a href="" class="button">Junioren</a>
-                <a href="" class="button">Senioren</a>
-              </div>
+              <MainEvent
+                :id="myMainEvent"
+                :heading="events.title"
+                :bodyText="events.bodyText"
+              />
             </div>
           </div>
         </div>
@@ -45,6 +32,7 @@
                 :image="event.image"
                 :title="event.title"
                 :shortText="event.shortText"
+                :id="event.id"
               />
             </div>
           </div>
@@ -81,12 +69,14 @@
 <script>
 import Event from '@/components/Event';
 import AsideBtns from '@/components/AsideBtns';
+import MainEvent from '@/components/MainEvent';
 
 export default {
   name: 'evenementen',
   components: {
     Event,
     AsideBtns,
+    MainEvent,
   },
   data() {
     return {
@@ -98,12 +88,16 @@ export default {
           title: 'Groot kamp',
           shortText:
             'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
+          bodyText:
+            'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
         },
         {
           id: 2,
           image: 'scouts2.jpg',
           title: 'Bivak',
           shortText:
+            'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
+          bodyText:
             'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
         },
         {
@@ -112,6 +106,8 @@ export default {
           title: 'Klein kamp',
           shortText:
             'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
+          bodyText:
+            'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
         },
         {
           id: 4,
@@ -119,9 +115,18 @@ export default {
           title: 'Mini kamp',
           shortText:
             'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
+          bodyText:
+            'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
         },
       ],
     };
+  },
+  computed: {
+    myMainEvent() {
+      return this.events.find(
+        event => this.$route.params.eventid === parseFloat(event.id)
+      );
+    },
   },
 };
 </script>

@@ -1,13 +1,17 @@
 <template>
   <article class="evenementen-slider__item">
     <div class="evenementen-slider__image">
-      <img :src="imageSrc" >
+      <img :src="imageSrc" />
     </div>
     <div class="evenementen-slider__content">
       <h2>{{ title }}</h2>
       <p>{{ shortText }}</p>
-      <a href="" class="button-more button-link__blue">Lees meer...</a>
-    </div>  
+      <router-link
+        :to="'/evenementen/' + id"
+        class="button-more button-link__blue"
+        >Over dit..</router-link
+      >
+    </div>
   </article>
 </template>
 
@@ -17,31 +21,30 @@ export default {
   props: {
     id: {
       type: Number,
-      required: true
+      required: true,
     },
     image: {
       type: String,
-      required: true
+      required: true,
     },
     title: {
       type: String,
-      required: true
+      required: true,
     },
-    shortText:{
+    shortText: {
       type: String,
-      required: true
+      required: true,
     },
     text: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   computed: {
-    imageSrc(){
-      return require("@/assets/images/" + this.image);
-    }
-  }
-  
+    imageSrc() {
+      return require('@/assets/images/' + this.image);
+    },
+  },
 };
 </script>
 

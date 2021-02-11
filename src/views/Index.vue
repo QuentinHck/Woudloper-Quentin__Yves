@@ -40,6 +40,7 @@
                 :image="event.image"
                 :title="event.title"
                 :shortText="event.shortText"
+                :id="event.id"
               />
             </div>
           </div>

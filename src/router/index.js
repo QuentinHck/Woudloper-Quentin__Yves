@@ -11,7 +11,7 @@ const routes = [
     component: Index,
   },
   {
-    path: '/evenementen/',
+    path: '/evenementen/:eventid',
     name: 'Evenementen',
     component: Evenementen,
   },

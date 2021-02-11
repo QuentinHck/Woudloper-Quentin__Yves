@@ -57,7 +57,7 @@ export default {
       dropdownOpen: false,
       navLinks: [
         { label: 'Home', path: '/' },
-        { label: 'Evenementen', path: '/evenementen/' },
+        { label: 'Evenementen', path: '/evenementen/:eventid' },
         { label: 'Nieuws', path: '/nieuws/' },
         { label: 'Contact', path: '/contact/' },
       ],
