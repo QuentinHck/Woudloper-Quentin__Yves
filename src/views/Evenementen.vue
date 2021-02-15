@@ -12,14 +12,23 @@
       <h1>Evenementen</h1>
       <div class="evenementen-slider content_text">
         <div class="evenementen-slider__main">
-          <div class="evenementen-slider__main-image"></div>
+          <div class="evenementen-slider__main-image">
+            <img :src="require('../assets/images/' + activeEvent.image)" />
+          </div>
           <div class="evenementen-slider__main-content-text">
             <div>
-              <MainEvent
-                v-if="myMainEvent"
-                :heading="events.title"
-                :bodyText="events.bodyText"
-              />
+              <h1>{{ activeEvent.title }}</h1>
+              <p>
+                {{ activeEvent.shortText }}
+              </p>
+              <p>
+                {{ activeEvent.bodyText }}
+              </p>
+              <h2>Voor wie?</h2>
+              <div class="evenementen-slider__main-content-text_filter">
+                <a href="" class="button">Junioren</a>
+                <a href="" class="button">Senioren</a>
+              </div>
             </div>
           </div>
         </div>
@@ -69,14 +78,12 @@
 <script>
 import Event from '@/components/Event';
 import AsideBtns from '@/components/AsideBtns';
-import MainEvent from '@/components/MainEvent';
 
 export default {
   name: 'evenementen',
   components: {
     Event,
     AsideBtns,
-    MainEvent,
   },
   data() {
     return {
@@ -122,9 +129,27 @@ export default {
     };
   },
   computed: {
-    myMainEvent() {
-      return this.events.find(event => event.id === this.$route.params.eventid);
+    activeEvent: function() {
+      let urlId = this.$route.params.eventid;
+      return this.events[urlId - 1];
     },
   },
 };
 </script>
+<style lang="scss">
+.evenementen-slider__main {
+  display: flex;
+  margin-bottom: 3rem;
+  &-image {
+    flex: 1;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+  &-content-text {
+    flex: 1;
+    padding: 2rem;
+  }
+}
+</style>
