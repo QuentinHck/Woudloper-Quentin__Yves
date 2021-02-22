@@ -351,10 +351,11 @@ footer div img{
 }
 
 .evenementen-slider__subcontainer{
-  overflow: hidden;
+  overflow-x:scroll;
   position: relative;
   width: 100%;
   height: 300px;
+  scroll-snap-type: x mandatory;
 }
 
 .evenementen-slider__frame{
