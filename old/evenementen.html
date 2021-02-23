@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Woudloper</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon_io/site.webmanifest">
+</head>
+<body>
+  <div id="navigation" class="navigation-background__transparant">
+    <div class="dropdown__navbar container">
+      <img src="images/logo.png" alt="logo scouts woudloper">
+      <div class="dropdown-menu">
+        <div class="dropdown-menu__button-container">
+          <div class="dropdown-menu__button"></div>
+        </div>
+        <div class="dropdown-menu__list">
+          <ul class="dropdown-menu__list-content">
+            <a href="index.html" ><li>Home</li></a>
+            <a href="evenementen.html"  class="active"><li>Evenementen</li></a>
+            <a href="nieuws.html"><li>Nieuws</li></a>
+            <a href="contact.html"><li>Contact</li></a>
+          </ul>
+        </div>  
+      </div>
+    </div>
+    <nav class="container">
+      <img src="images/logo.png" alt="logo scouts woudloper">
+      <ul>
+        <a href="index.html"><li>Home</li></a>
+        <a href="evenementen.html"  class="active"><li>Evenementen</li></a>
+        <a href="nieuws.html"><li>Nieuws</li></a>
+        <a href="contact.html"><li>Contact</li></a>
+      </ul>
+    </nav>
+  </div>
+  <aside class="signup-field">
+    <div class="aside__button signup-field__button button-link__blue">
+      <div class="aside__heading signup-field__heading">
+        <h2>Wordt nu lid!</h2>
+        <div class="dropdown-aside__button"></div>
+      </div>
+      <form class="signup-field__form" name="signup-form" action="" method="GET">
+        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Naam">
+        <input type="text" placeholder="Adres">
+        <input type="submit" value="Inschrijven">
+      </form>
+    </div>
+    <div class="aside__button button-agenda ">
+      <div class="aside__heading  agenda-field__heading">
+        <h2>Agenda</h2>
+        <div class="agenda-dropdown dropdown-aside__button">
+          <img class="calendar-icon" src="images/icon-calendar.svg" alt="icoon kalender">
+        </div>
+      </div>
+      <div id="card-calendar">
+        <h2 class="card-header" id="monthAndYear"></h2>
+        <table class="table" id="calendar">
+          <thead>
+            <tr>
+              <th>Zo</th>
+              <th>Ma</th>
+              <th>Di</th>
+              <th>Wo</th>
+              <th>Do</th>
+              <th>Vr</th>
+              <th>Za</th>
+            </tr>
+          </thead>
+          <tbody id="calendar-body">
+          </tbody>
+          <div class="calendar-buttons">
+            <button class="previousBtn" onClick=calendarPrev()><span></span></button>
+            <button class="nextBtn" onClick=calendarNext()><span></span></button>
+          </div>
+        </table>
+      </div>
+    </div>
+  </aside>
+  <header>
+  </header>
+  <section id="evenementen">
+    <div class="container">
+      <h1>Evenementen</h1>
+      <div class="evenementen-slider content_text">
+        <div class="evenementen-slider__main">
+          <div class="evenementen-slider__main-image">
+          </div>
+          <div class="evenementen-slider__main-content-text">
+            <div>
+              <h1>Groot kamp</h1>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum rerum perspiciatis in nostrum architecto ut expedita beatae, facere quasi nam impedit repudiandae quidem voluptatum vero. Voluptatibus odit nulla error iste?</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem optio ad accusamus consequuntur maiores minima perspiciatis id ut. Dignissimos assumenda quia harum ipsum illo repellendus autem corporis ea blanditiis nulla!</p>
+              <h2>Voor wie?</h2>
+              <div class="evenementen-slider__main-content-text_filter">
+                <a href="" class="button">Junioren</a>
+                <a href="" class="button">Senioren</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="evenementen-slider__wrapper">
+          <div class="evenementen-slider__subcontainer">
+            <div class="evenementen-slider__frame">
+              <article class="evenementen-slider__item">
+                <div class="evenementen-slider__image">
+                  <img src="images/camp.jpg" alt="mensen aan panorama met zonsondergang">
+                </div>
+                <div class="evenementen-slider__content">
+                  <h2>Groot kamp</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
+                  <a href="" class="button-more button-link__blue">Lees meer...</a>
+                </div>  
+              </article>
+              <article class="evenementen-slider__item">
+                <div class="evenementen-slider__image">
+                  <img src="images/camp.jpg" alt="mensen aan panorama met zonsondergang">
+                </div>
+                <div class="evenementen-slider__content">
+                  <h2>Groot kamp</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
+                  <a href="" class="button-more button-link__blue">Lees meer...</a>
+                </div>  
+              </article>
+              <article class="evenementen-slider__item">
+                <div class="evenementen-slider__image">
+                  <img src="images/camp.jpg" alt="mensen aan panorama met zonsondergang">
+                </div>
+                <div class="evenementen-slider__content">
+                  <h2>Groot kamp</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
+                  <a href="" class="button-more button-link__blue">Lees meer...</a>
+                </div>  
+              </article>
+              <article class="evenementen-slider__item">
+                <div class="evenementen-slider__image">
+                  <img src="images/camp.jpg" alt="mensen aan panorama met zonsondergang">
+                </div>
+                <div class="evenementen-slider__content">
+                  <h2>Groot kamp</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
+                  <a href="" class="button-more button-link__blue">Lees meer...</a>
+                </div>  
+              </article>
+              <article class="evenementen-slider__item">
+                <div class="evenementen-slider__image">
+                  <img src="images/camp.jpg" alt="mensen aan panorama met zonsondergang">
+                </div>
+                <div class="evenementen-slider__content">
+                  <h2>Groot kamp</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet pretium arcu</p>
+                  <a href="" class="button-more button-link__blue">Lees meer...</a>
+                </div>  
+              </article>
+            </div>
+          </div>
+          <div class="evenementen-slider-buttons">
+            <button class="previousBtn evenementen-slider-buttons__left"><span></span></button>
+            <button class="nextBtn evenementen-slider-buttons__right"><span></span></button>
+          </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <section class="container">
+      <h2>Interessante links</h2>
+      <ul>
+        <a href="">Evenementen</a>
+        <a href="">Contacteer ons</a>
+        <a href="">Inschrijvingsformulier</a>
+        <a href="">Onze agenda</a>
+        <a href="">Algemeen reglement</a>
+        <a href="">Infobrief groot kamp</a>
+      </ul>
+    </section>
+    <div>
+      <img src="images/logo.png" alt="logo scouts woudloper">
+    </div>
+  </footer>
+</body>
+<script src="script.js"></script>
+</html>
