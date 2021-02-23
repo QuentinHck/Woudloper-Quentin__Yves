@@ -28,9 +28,10 @@ const routes = [{
     component: Contact,
   },
 ];
-const router = createRouter({
-  history: createWebHashHistory(),
-  routes
-})
 
-export default router
+const router = createRouter({
+  history: createWebHistory(process.env.BASE_URL),
+  routes,
+});
+
+export default router;
