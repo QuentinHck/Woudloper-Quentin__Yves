@@ -33,8 +33,8 @@
           </div>
         </div>
         <div class="evenementen-slider__wrapper">
-          <div class="evenementen-slider__subcontainer">
-            <div class="evenementen-slider__frame" ref="slider">
+          <div class="evenementen-slider__subcontainer" ref="slider">
+            <div class="evenementen-slider__frame">
               <Event
                 v-for="event of events"
                 :key="event.id"
@@ -141,7 +141,6 @@ export default {
     slideLeft() {
       this.$refs.slider.scrollLeft =
         this.$refs.slider.scrollLeft - this.slideWidth;
-      console.log(this.$refs.slider.scrollLeft);
     },
     slideRight() {
       this.$refs.slider.scrollLeft =
