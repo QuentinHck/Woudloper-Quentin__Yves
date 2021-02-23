@@ -1,81 +1,28 @@
 <template>
-  <aside class="signup-field">
-    <div class="aside__button signup-field__button button-link__blue">
-      <div class="aside__heading signup-field__heading">
-        <h2>Wordt nu lid!</h2>
-        <div class="dropdown-aside__button"></div>
-      </div>
-      <form
-        class="signup-field__form"
-        name="signup-form"
-        action=""
-        method="GET"
-      >
-        <input type="text" placeholder="Email" />
-        <input type="text" placeholder="Naam" />
-        <input type="text" placeholder="Adres" />
-        <input type="submit" value="Inschrijven" />
-      </form>
-    </div>
-    <div class="aside__button button-agenda ">
-      <div class="aside__heading  agenda-field__heading">
-        <h2>Agenda</h2>
-        <div class="agenda-dropdown dropdown-aside__button">
-          <img
-            class="calendar-icon"
-            src="../assets/images/icon-calendar.svg"
-            alt="icoon kalender"
-          />
-        </div>
-      </div>
-      <div id="card-calendar">
-        <h2 class="card-header" id="monthAndYear"></h2>
-        <table class="table" id="calendar">
-          <thead>
-            <tr>
-              <th>Zo</th>
-              <th>Ma</th>
-              <th>Di</th>
-              <th>Wo</th>
-              <th>Do</th>
-              <th>Vr</th>
-              <th>Za</th>
-            </tr>
-          </thead>
-          <tbody id="calendar-body"></tbody>
-          <div class="calendar-buttons">
-            <button class="previousBtn" onClick="calendarPrev()">
-              <span></span>
-            </button>
-            <button class="nextBtn" onClick="calendarNext()">
-              <span></span>
-            </button>
-          </div>
-        </table>
-      </div>
-    </div>
+  <aside
+    class="
+  signup-field
+  "
+  >
+    <AsideBtns />
   </aside>
-  <header></header>
+  <div class="hero"></div>
   <section id="evenementen">
     <div class="container">
       <h1>Evenementen</h1>
       <div class="evenementen-slider content_text">
         <div class="evenementen-slider__main">
-          <div class="evenementen-slider__main-image"></div>
+          <div class="evenementen-slider__main-image">
+            <img :src="require('../assets/images/' + activeEvent.image)" />
+          </div>
           <div class="evenementen-slider__main-content-text">
             <div>
-              <h1>Groot kamp</h1>
+              <h1>{{ activeEvent.title }}</h1>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
-                rerum perspiciatis in nostrum architecto ut expedita beatae,
-                facere quasi nam impedit repudiandae quidem voluptatum vero.
-                Voluptatibus odit nulla error iste?
+                {{ activeEvent.shortText }}
               </p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolorem optio ad accusamus consequuntur maiores minima
-                perspiciatis id ut. Dignissimos assumenda quia harum ipsum illo
-                repellendus autem corporis ea blanditiis nulla!
+                {{ activeEvent.bodyText }}
               </p>
               <h2>Voor wie?</h2>
               <div class="evenementen-slider__main-content-text_filter">
@@ -94,6 +41,7 @@
                 :image="event.image"
                 :title="event.title"
                 :shortText="event.shortText"
+                :id="event.id"
               />
             </div>
           </div>
@@ -129,12 +77,17 @@
 
 <script>
 import Event from '@/components/Event';
+import AsideBtns from '@/components/AsideBtns';
 
 export default {
   name: 'evenementen',
-  components: { Event },
+  components: {
+    Event,
+    AsideBtns,
+  },
   data() {
     return {
+      scrollIndex: null,
       events: [
         {
           id: 1,
@@ -142,19 +95,25 @@ export default {
           title: 'Groot kamp',
           shortText:
             'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
+          bodyText:
+            'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
         },
         {
           id: 2,
-          image: 'camp.jpg',
+          image: 'scouts2.jpg',
           title: 'Bivak',
           shortText:
+            'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
+          bodyText:
             'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
         },
         {
           id: 3,
-          image: 'camp.jpg',
+          image: 'scouts1.jpg',
           title: 'Klein kamp',
           shortText:
+            'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
+          bodyText:
             'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
         },
         {
@@ -163,9 +122,34 @@ export default {
           title: 'Mini kamp',
           shortText:
             'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
+          bodyText:
+            'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
         },
       ],
     };
   },
+  computed: {
+    activeEvent: function() {
+      let urlId = this.$route.params.eventid;
+      return this.events[urlId - 1];
+    },
+  },
 };
 </script>
+<style lang="scss">
+.evenementen-slider__main {
+  display: flex;
+  margin-bottom: 3rem;
+  &-image {
+    flex: 1;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+  &-content-text {
+    flex: 1;
+    padding: 2rem;
+  }
+}
+</style>
