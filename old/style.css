@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-*{
+* {
   box-sizing: border-box;
   border-spacing: 0;
 }
-/* 
+/*
 roboto light weight: 300
 roboto regular weight: 400
 roboto medium weight: 500
@@ -11,25 +11,27 @@ roboto bold weight: 700
 
 */
 
-body,html{
+body,
+html {
   padding: 0;
   margin: 0;
-  background-color: #0559D3;
+  background-color: #0559d3;
 }
 
-body, p{
+body,
+p {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   color: #003575;
 }
 
-p{
+p {
   font-size: 15px;
   line-height: 1.3em;
   font-weight: 300;
 }
 
-body > header{
+body > header {
   height: 90vh;
   width: 100vw;
   background-image: url('images/background.jpg');
@@ -42,25 +44,24 @@ body > header{
   z-index: 3;
 }
 
-header .button{
+header .button {
   margin: 0;
-  margin-top:7rem ;
+  margin-top: 7rem;
 }
 
-header .button-agenda{
+header .button-agenda {
   display: none;
 }
 
-
-body > section:nth-child(odd){
+body > section:nth-child(odd) {
   clip-path: polygon(0 0, 100% 3vw, 100% calc(100% - 3vw), 0% 100%);
   padding: 4rem 0 7rem;
-  background-color: #D8E0E5;
+  background-color: #d8e0e5;
   position: relative;
   z-index: 0;
 }
 
-body > section:nth-child(even){
+body > section:nth-child(even) {
   padding: 5rem 0 8rem;
   margin-top: -4rem;
   margin-bottom: -5rem;
@@ -69,36 +70,36 @@ body > section:nth-child(even){
   z-index: 0;
 }
 
-.full-width{
+.full-width {
   width: 100%;
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-h1{
+h1 {
   font-weight: 300;
   font-size: 30px;
-  color: #0559D3;
+  color: #0559d3;
   text-decoration: underline;
 }
 
-h2{
+h2 {
   font-weight: 500;
   font-size: 20px;
-  color: #0559D3;
+  color: #0559d3;
 }
 
-aside{
-  transition: all .5s ease-in-out;
+aside {
+  transition: all 0.5s ease-in-out;
 }
 
-aside.reduce{
+aside.reduce {
   left: -180px;
 }
 
-.button{
+.button {
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -108,8 +109,8 @@ aside.reduce{
   margin: 0.5em;
 }
 
-.button-more{
-  font-size: .8rem;
+.button-more {
+  font-size: 0.8rem;
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -118,39 +119,36 @@ aside.reduce{
   transition: background-color 0.3s;
 }
 
-.button-link__blue{
-  background-color: #0559D3;
+.button-link__blue {
+  background-color: #0559d3;
   color: white;
 }
 
-.button-link__blue:hover{
+.button-link__blue:hover {
   background-color: #003575;
 }
 
-.button-link__white{
-  color: #0559D3;
+.button-link__white {
+  color: #0559d3;
   background-color: white;
 }
 
-.button-link__white:hover{
-  background-color:  #003575;
+.button-link__white:hover {
+  background-color: #003575;
   color: white;
 }
 
-.aside__button{
+.aside__button {
   padding: 1rem;
   margin-top: 10px;
   border-top-right-radius: 10px;
   text-align: right;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-
-
-
 
 /*---------- NAVIGATION MENU --------------*/
 
-#navigation{
+#navigation {
   height: 70px;
   display: flex;
   align-items: center;
@@ -161,30 +159,30 @@ aside.reduce{
   z-index: 100;
 }
 
-.navigation-background__transparant{
+.navigation-background__transparant {
   background-color: rgba(255, 255, 255, 0);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.navigation-background__colored{
+.navigation-background__colored {
   background-color: rgba(255, 255, 255, 1);
-  transition: all .3s ease-in-out;
-  box-shadow: 1px -7px 22px 0px rgba(5,89,211,0.87);
-  -webkit-box-shadow: 1px -7px 22px 0px rgba(5,89,211,0.87);
-  -moz-box-shadow: 1px -7px 22px 0px rgba(5,89,211,0.87);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 1px -7px 22px 0px rgba(5, 89, 211, 0.87);
+  -webkit-box-shadow: 1px -7px 22px 0px rgba(5, 89, 211, 0.87);
+  -moz-box-shadow: 1px -7px 22px 0px rgba(5, 89, 211, 0.87);
 }
 
-nav{
+nav {
   height: 50px;
   display: flex;
   justify-content: space-between;
 }
 
-nav img{
+nav img {
   height: 100%;
 }
 
-nav a{
+nav a {
   text-decoration: none;
   color: #003575;
   display: block;
@@ -192,45 +190,43 @@ nav a{
   position: relative;
 }
 
-
-nav a.active::after{
+nav a.active::after {
   position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: rgba(5, 90, 211, 1);
-	content: '';
-	opacity: 1;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(5, 90, 211, 1);
+  content: '';
+  opacity: 1;
 }
 
-nav a::after{
+nav a::after {
   position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: rgba(5, 90, 211, 1);
-	content: '';
-	opacity: 0;
-	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-	-moz-transition: opacity 0.3s, -moz-transform 0.3s;
-	transition: opacity 0.3s, transform 0.3s;
-	-webkit-transform: translateY(10px);
-	-moz-transform: translateY(10px);
-	transform: translateY(10px);
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(5, 90, 211, 1);
+  content: '';
+  opacity: 0;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  transform: translateY(10px);
 }
 
 nav a:hover::after,
 nav a:focus::after {
-	opacity: 1;
-	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	transform: translateY(0px);
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
 }
 
-
-nav ul{
+nav ul {
   display: flex;
   list-style-type: none;
   height: 100%;
@@ -240,16 +236,16 @@ nav ul{
 
 /* ---------- hamburger menu ---------- */
 
-.dropdown__navbar{
+.dropdown__navbar {
   display: none;
   height: 50px;
 }
 
-.dropdown__navbar img{
+.dropdown__navbar img {
   height: 80%;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   width: 50px;
   height: 50px;
   float: right;
@@ -258,47 +254,49 @@ nav ul{
   align-items: center;
 }
 
-.dropdown-menu__button-container{
+.dropdown-menu__button-container {
+  display: block;
   position: relative;
   z-index: 200;
 }
 
-.dropdown-menu__button{
+.dropdown-menu__button {
+  display: block;
   width: 30px;
-  background-color: #0559D3;
+  background-color: #0559d3;
   height: 4px;
   border-radius: 5px;
-  transition: all .1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   z-index: 20;
 }
 
 .dropdown-menu__button::before,
-.dropdown-menu__button::after{
+.dropdown-menu__button::after {
   content: '';
   position: absolute;
   width: 30px;
-  background-color: #0559D3;
+  background-color: #0559d3;
   height: 4px;
   border-radius: 5px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.dropdown-menu__button::before{
+.dropdown-menu__button::before {
   transform: translateY(-8px);
 }
 
-.dropdown-menu__button::after{
+.dropdown-menu__button::after {
   transform: translateY(8px);
 }
 
-.dropdown-menu__list{
+.dropdown-menu__list {
   position: absolute;
   z-index: 100;
   width: 100vw;
   height: 100vh;
   right: 0;
   top: 0;
-  background-color: #0559D3 ;
+  background-color: #0559d3;
   transform: translateX(100%);
   transition: transform 0.3s ease;
   margin: 0;
@@ -307,79 +305,77 @@ nav ul{
   align-content: center;
 }
 
-.dropdown-menu__list-content{
+.dropdown-menu__list-content {
   align-self: center;
   list-style-type: none;
   font-weight: 500;
   padding: 0;
-  margin:0;
+  margin: 0;
   text-align: center;
 }
 
-.dropdown-menu__list-content a{
+.dropdown-menu__list-content a {
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  color: #FFF;
+  color: #fff;
   padding: 0 3em;
   font-size: 1.5em;
 }
 /* ANIMATION  */
 
-.dropdown-menu.open .dropdown-menu__button{
+.dropdown-menu.open .dropdown-menu__button {
   transform: translateX(-50px);
   background: transparent;
 }
 
-.dropdown-menu.open .dropdown-menu__button::before{
-  transform:rotate(45deg) translate(35px,-35px);
-  background-color: #FFF;
+.dropdown-menu.open .dropdown-menu__button::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  background-color: #fff;
 }
 
-.dropdown-menu.open .dropdown-menu__button::after{
-  transform:rotate(-45deg) translate(35px,35px);
-  background-color: #FFF;
+.dropdown-menu.open .dropdown-menu__button::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background-color: #fff;
 }
 
-.dropdown-menu__list.show-dropdown{
+.dropdown-menu__list.show-dropdown {
   transform: translateX(0);
 }
 
-
 /*------- SIGN UP FORM --------*/
-
 
 .aside__heading {
   display: flex;
   justify-content: space-between;
 }
 
-.aside__heading  h2{
+.aside__heading h2 {
   color: #fff;
-  margin:0;
+  margin: 0;
 }
 
-.aside__button{
-  box-shadow: 3px 3px 6px -3px rgba(5,89,211,0.87);
-  -webkit-box-shadow: 3px 3px 6px -3px rgba(5,89,211,0.87);
-  -moz-box-shadow: 3px 3px 6px -3px rgba(5,89,211,0.87);
+.aside__button {
+  box-shadow: 3px 3px 6px -3px rgba(5, 89, 211, 0.87);
+  -webkit-box-shadow: 3px 3px 6px -3px rgba(5, 89, 211, 0.87);
+  -moz-box-shadow: 3px 3px 6px -3px rgba(5, 89, 211, 0.87);
 }
 
-.aside__button span{
+.aside__button span {
   display: inline-block;
 }
-.dropdown-aside__button{
+.dropdown-aside__button {
   width: 30px;
   background-color: #fff;
   height: 4px;
   border-radius: 5px;
   top: 10px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   position: relative;
 }
 
 .dropdown-aside__button::before,
-.dropdown-aside__button::after{
+.dropdown-aside__button::after {
   content: '';
   position: absolute;
   width: 30px;
@@ -387,18 +383,18 @@ nav ul{
   height: 4px;
   border-radius: 5px;
   left: 0;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.dropdown-aside__button::before{
+.dropdown-aside__button::before {
   transform: translateY(-8px);
 }
 
-.dropdown-aside__button::after{
+.dropdown-aside__button::after {
   transform: translateY(8px);
 }
 
-.signup-field{
+.signup-field {
   position: fixed;
   left: 0;
   top: 100px;
@@ -406,177 +402,171 @@ nav ul{
   width: 250px;
 }
 
-.signup-field__form{
+.signup-field__form {
   display: flex;
   flex-direction: column;
-  overflow:hidden;
+  overflow: hidden;
   height: 0px;
   flex-direction: column;
   padding: 0rem;
   position: relative;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.signup-field__form input{
+.signup-field__form input {
   /*padding: 1em;*/
   border: none;
-  border-bottom:solid 1px #0559D3;
+  border-bottom: solid 1px #0559d3;
   flex: 1;
 }
 
-.signup-field__form input:first-child{
+.signup-field__form input:first-child {
   margin-top: 1em;
 }
 
-.signup-field__form input[type=submit]{
+.signup-field__form input[type='submit'] {
   background-color: #fff;
-  color: #0559D3;
-  border: 2px solid #FFF;
+  color: #0559d3;
+  border: 2px solid #fff;
   text-transform: uppercase;
 }
 
-
-
 /* ANIMATION */
 
-.dropdown-aside__button.open{
+.dropdown-aside__button.open {
   transform: translateX(-50px);
   background: transparent;
 }
 
-.dropdown-aside__button.open::before{
-  transform:rotate(45deg) translate(35px,-35px);
-  background-color: #FFF;
+.dropdown-aside__button.open::before {
+  transform: rotate(45deg) translate(35px, -35px);
+  background-color: #fff;
 }
 
-.dropdown-aside__button.open::after{
-  transform:rotate(-45deg) translate(35px,35px);
-  background-color: #FFF;
+.dropdown-aside__button.open::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  background-color: #fff;
 }
 
 .signup-field__form.show-dropdown {
   height: 30vh;
 }
 
-
-
-
 /* ------    CALENDAR  --------*/
 
-.button-agenda{
+.button-agenda {
   background-color: #fff;
 }
 
-.button-agenda:hover{
-  background-color:  #003575;
+.button-agenda:hover {
+  background-color: #003575;
 }
 
 .button-agenda:hover .agenda-field__heading,
-.button-agenda:hover .agenda-field__heading h2{
+.button-agenda:hover .agenda-field__heading h2 {
   color: #fff;
 }
 
-.button-agenda .agenda-field__heading h2{
-  color: #0559D3;;
+.button-agenda .agenda-field__heading h2 {
+  color: #0559d3;
 }
 
-
 .button-agenda .dropdown-aside__button::before,
-.button-agenda .dropdown-aside__button::after{
+.button-agenda .dropdown-aside__button::after {
   background-color: transparent;
 }
 
 .aside-heading:hover .dropdown-aside__button::before,
-.aside-heading:hover .dropdown-aside__button::after{
+.aside-heading:hover .dropdown-aside__button::after {
   background-color: transparent;
 }
 
-.agenda-dropdown.open .calendar-icon{
-  transition: .5s ease-in-out all;
+.agenda-dropdown.open .calendar-icon {
+  transition: 0.5s ease-in-out all;
   opacity: 0;
   background-color: transparent;
 }
 .agenda-dropdown.open::before,
-.agenda-dropdown.open::after{
-  background-color: #0559D3;
+.agenda-dropdown.open::after {
+  background-color: #0559d3;
 }
 
 .button-agenda:hover .agenda-dropdown.open::after,
-.button-agenda:hover .agenda-dropdown.open::before{
+.button-agenda:hover .agenda-dropdown.open::before {
   background-color: #fff;
 }
 
-.agenda-field__heading .dropdown-aside__button{
+.agenda-field__heading .dropdown-aside__button {
   width: 30px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   position: relative;
   background-color: transparent;
 }
 
-.agenda-field__heading .calendar-icon{
+.agenda-field__heading .calendar-icon {
   width: 100%;
   transform: translateY(-8px);
-  filter: invert(26%) sepia(98%) saturate(1493%) hue-rotate(199deg) brightness(89%) contrast(118%);
+  filter: invert(26%) sepia(98%) saturate(1493%) hue-rotate(199deg)
+    brightness(89%) contrast(118%);
 }
 
-.button-agenda:hover .calendar-icon{
+.button-agenda:hover .calendar-icon {
   filter: invert(100);
 }
 
-
-#card-calendar
-,.button-agenda:hover #card-calendar{
+#card-calendar,
+.button-agenda:hover #card-calendar {
   background-color: white;
 }
 
-#card-calendar{
+#card-calendar {
   width: 400px;
   position: absolute;
   margin-top: 1rem;
   left: -400px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-#card-calendar.show-dropdown{
+#card-calendar.show-dropdown {
   left: 0;
 }
 
-table#calendar{
+table#calendar {
   display: block;
   margin: 0;
 }
 
-#card-calendar h2{
+#card-calendar h2 {
   text-align: center;
 }
 
-#card-calendar thead{
+#card-calendar thead {
   width: 84%;
   margin: auto;
-  display:block;
+  display: block;
 }
 
-#card-calendar thead tr{
+#card-calendar thead tr {
   width: 100%;
   display: flex;
   text-align: center;
 }
 
-#card-calendar thead th{
+#card-calendar thead th {
   display: block;
   float: left;
   width: calc(100% / 7);
 }
 
-#card-calendar .calendar-buttons{
+#card-calendar .calendar-buttons {
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-.previousBtn{
+.previousBtn {
   display: block;
   background-color: #fff;
   top: calc(40% - 15px);
@@ -584,13 +574,12 @@ table#calendar{
   width: 22px;
   height: 22px;
   position: absolute;
-  background-color:#0559D3;
+  background-color: #0559d3;
   border: 0;
   border-radius: 50%;
-  
 }
 
-.nextBtn{
+.nextBtn {
   display: block;
   background-color: #fff;
   top: calc(40% - 15px);
@@ -598,12 +587,12 @@ table#calendar{
   width: 22px;
   height: 22px;
   position: absolute;
-  background-color:#0559D3;
+  background-color: #0559d3;
   border: 0;
   border-radius: 50%;
 }
 
-.nextBtn span{
+.nextBtn span {
   display: block;
   width: 11px;
   height: 11px;
@@ -612,7 +601,7 @@ table#calendar{
   clip-path: polygon(65% 50%, 0 0, 0 100%);
 }
 
-.previousBtn span{
+.previousBtn span {
   display: block;
   width: 11px;
   height: 11px;
@@ -621,73 +610,67 @@ table#calendar{
   clip-path: polygon(35% 50%, 100% 0, 100% 100%);
 }
 
-#calendar-body{
+#calendar-body {
   display: block;
   width: 84%;
   margin: auto;
 }
 
-#calendar-body tr{
+#calendar-body tr {
   width: 100%;
   display: inline-block;
 }
 
-#calendar-body tr td{
+#calendar-body tr td {
   display: inline-block;
   width: calc(100% / 7);
   text-align: center;
   padding: 1rem 0;
 }
 
-.container{
+.container {
   width: 1200px;
   margin: auto;
 }
 
-
-
-
-.intro-content_text{
+.intro-content_text {
   display: flex;
   justify-content: space-between;
   line-height: 1.2em;
   flex-wrap: wrap;
 }
 
-.intro-content_text p{
+.intro-content_text p {
   flex: 1;
   padding: 0 1em;
 }
 
-.intro-content_text p:first-child{
+.intro-content_text p:first-child {
   padding-left: 0;
 }
 
-.intro-content_text p:last-child{
+.intro-content_text p:last-child {
   padding-right: 0;
 }
 
-
-
-
-.nieuws-content__wrapper{
+.nieuws-content__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: -1rem -1.5rem 0 -1.5rem;
 }
 
-.nieuws-content__item{
+.nieuws-content__item {
   flex: 1;
   min-width: 28%;
   margin: 1rem 1.5rem 0px 1.5rem;
   padding-bottom: 2em;
-  border-bottom: #0559D3 1px solid;
+  border-bottom: #0559d3 1px solid;
   border-bottom-right-radius: 20px;
 }
 
-.nieuws-content__date{
-  font-size: .8em;
+.nieuws-content__date {
+  font-size: 0.8em;
   color: rgb(5, 89, 211);
   font-weight: 500;
   display: flex;
@@ -695,49 +678,48 @@ table#calendar{
   align-items: center;
 }
 
-.nieuws-content__date img{
+.nieuws-content__date img {
   width: 20px;
   height: 25px;
-  filter: invert(26%) sepia(98%) saturate(1493%) hue-rotate(199deg) brightness(89%) contrast(118%);
+  filter: invert(26%) sepia(98%) saturate(1493%) hue-rotate(199deg)
+    brightness(89%) contrast(118%);
 }
 
-.nieuws-content__date p{
+.nieuws-content__date p {
   display: inline-block;
   margin-left: 10px;
-  color: #0559D3;
+  color: #0559d3;
   font-weight: 500;
 }
 
-
-
-
-
-footer, footer h2, footer a{
+footer,
+footer h2,
+footer a {
   color: white;
   text-align: center;
 }
 
-footer{
+footer {
   position: relative;
   z-index: 5;
   padding-top: 4rem;
-  background-color: #0559D3;
+  background-color: #0559d3;
   clip-path: polygon(0 0, 100% 3vw, 100% 100%, 0 100%);
 }
 
-footer a{
+footer a {
   text-decoration: none;
-  padding:0.5rem 0;
+  padding: 0.5rem 0;
   width: calc(100% / 3);
   text-align: center;
   font-size: 0.8rem;
 }
 
-footer a:hover{
+footer a:hover {
   text-decoration: underline;
 }
 
-footer ul{
+footer ul {
   text-transform: uppercase;
   list-style-type: none;
   padding: 0;
@@ -745,62 +727,59 @@ footer ul{
   flex-wrap: wrap;
 }
 
-footer div{
+footer div {
   height: 25px;
   width: 100%;
   background-color: white;
   display: flex;
   margin-top: 3rem;
-
 }
 
-footer div img{
+footer div img {
   display: block;
   height: 70%;
   margin: auto;
 }
 
-
-
 /* ---------------- evenementen page ----------*/
 
-.evenementen-slider__main{
+.evenementen-slider__main {
   display: flex;
   margin-bottom: 3rem;
 }
 
-.evenementen-slider__main-image{
+.evenementen-slider__main-image {
   flex: 1;
   background-image: url(images/camp.jpg);
   background-size: cover;
   background-position: center;
 }
 
-.evenementen-slider__main-content-text{
-  flex:1;
+.evenementen-slider__main-content-text {
+  flex: 1;
   padding: 2rem;
 }
 
 /*  ------------------ slider evenementen ------------------*/
 
-.evenementen-slider__wrapper{
+.evenementen-slider__wrapper {
   position: relative;
 }
 
-.evenementen-slider__subcontainer{
+.evenementen-slider__subcontainer {
   overflow: hidden;
   position: relative;
   width: 100%;
   height: 520px;
 }
 
-.evenementen-slider__frame{
+.evenementen-slider__frame {
   justify-content: space-between;
   position: absolute;
   width: 99999px;
 }
 
-.evenementen-slider-buttons{
+.evenementen-slider-buttons {
   position: absolute;
   width: 100%;
   display: flex;
@@ -808,16 +787,16 @@ footer div img{
   top: 50%;
 }
 
-.evenementen-slider-buttons__left{
+.evenementen-slider-buttons__left {
   left: -45px;
 }
 
-.evenementen-slider-buttons__right{
-  right:-45px;
-  left:auto;
+.evenementen-slider-buttons__right {
+  right: -45px;
+  left: auto;
 }
 
-.evenementen-slider__item{
+.evenementen-slider__item {
   width: calc((1200px / 3) - 2em);
   margin: 1em;
   float: left;
@@ -826,42 +805,42 @@ footer div img{
   border-bottom-left-radius: 20px;
   overflow: hidden;
   padding-bottom: 3rem;
-  border-bottom: 3px solid #0559D3;
+  border-bottom: 3px solid #0559d3;
 }
 
-.evenementen-slider__image img{
+.evenementen-slider__image img {
   width: 100%;
   margin-bottom: 1rem;
 }
 
-.evenementen-slider__content{
+.evenementen-slider__content {
   padding: 0 2em;
 }
 
-.evenementen-slider__content a{
+.evenementen-slider__content a {
   margin-top: 1em;
 }
 
 /*  ------------------ contact page ------------------*/
 
-#contact-content{
+#contact-content {
   position: relative;
 }
 
-#contact-content img.icon{
+#contact-content img.icon {
   width: 20px;
   margin-right: 1em;
 }
 
-.contact-content__text{
+.contact-content__text {
   width: 50%;
 }
 
-.contact-content__text div{
+.contact-content__text div {
   margin-top: 2em;
 }
 
-.contact-content__map{
+.contact-content__map {
   width: 50%;
   height: 120%;
   position: absolute;
@@ -870,41 +849,41 @@ footer div img{
   left: 50%;
 }
 
-#contact-content iframe{
+#contact-content iframe {
   height: 100%;
   width: 100%;
 }
 
-#contact-form{
+#contact-form {
   text-align: center;
 }
 
-#contact-form form{
+#contact-form form {
   width: 50%;
   margin: auto;
   display: flex;
   flex-direction: column;
 }
 
-#contact-form form input{
+#contact-form form input {
   height: 2.5em;
   margin: 1em 0;
-  background-color: #D8E0E5;
+  background-color: #d8e0e5;
   border: none;
-  border-bottom: 1px solid #0559D3 ;
+  border-bottom: 1px solid #0559d3;
 }
 
-#contact-form form input:focus{
+#contact-form form input:focus {
   padding-bottom: 2px;
   outline: none;
-  border-bottom: 2px solid #0559D3 ;
+  border-bottom: 2px solid #0559d3;
 }
 
-#contact-form form input[type = "submit"]{
+#contact-form form input[type='submit'] {
   margin-top: 2.5em;
   height: 3rem;
   line-height: 2em;
-  background-color: #0559D3;
+  background-color: #0559d3;
   color: white;
   text-transform: uppercase;
   border-radius: 10px;
@@ -921,48 +900,47 @@ md (for small laptops - screens equal to or greater than 992px wide)
 lg (for laptops and desktops - screens equal to or greater than 1200px wide)
 */
 
-
 @media screen and (max-width: 1280px) {
-  .container{
+  .container {
     width: 992px;
   }
 }
 
 @media screen and (max-width: 1080px) {
-  .container{
+  .container {
     width: 768px;
   }
-  #contact-form form{
+  #contact-form form {
     width: 65%;
   }
 }
 
 @media screen and (max-width: 860px) {
-  .container{
+  .container {
     width: 80%;
   }
 
-  nav{
+  nav {
     display: none;
   }
 
-  .dropdown__navbar{
+  .dropdown__navbar {
     display: block;
   }
 
-  header .button-agenda{
+  header .button-agenda {
     display: inline-block;
   }
 
-  header #card-calendar{
+  header #card-calendar {
     display: none;
   }
 
-  .nieuws-content__wrapper{
+  .nieuws-content__wrapper {
     margin: 0;
   }
 
-  .nieuws-content__item{
+  .nieuws-content__item {
     min-width: 100%;
     text-align: left;
     margin: 1em 0;
@@ -970,25 +948,25 @@ lg (for laptops and desktops - screens equal to or greater than 1200px wide)
 }
 
 @media screen and (max-width: 700px) {
-  .intro-content_text{
+  .intro-content_text {
     display: flex;
     flex-wrap: wrap;
   }
-  .intro-content_text p{
+  .intro-content_text p {
     width: 100%;
   }
-  .contact-content__text{
+  .contact-content__text {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
   }
-  .contact-content__text h1{
+  .contact-content__text h1 {
     width: 100%;
   }
-  .contact-content__text div{
+  .contact-content__text div {
     flex: 1;
   }
-  #contact-content .contact-content__map{
+  #contact-content .contact-content__map {
     width: 100%;
     height: 300px;
     position: relative;
@@ -998,28 +976,30 @@ lg (for laptops and desktops - screens equal to or greater than 1200px wide)
   }
 }
 
-@media screen and (max-width: 570px){
-  h1,h2,p{
+@media screen and (max-width: 570px) {
+  h1,
+  h2,
+  p {
     text-align: center;
   }
-  .container{
+  .container {
     width: 90%;
   }
-  .intro-content_text p{
+  .intro-content_text p {
     flex: auto;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
-  .contact-content__text div{
+  .contact-content__text div {
     width: 100%;
     flex: none;
     margin-top: 1em;
   }
-  #contact-form form{
+  #contact-form form {
     width: 100%;
   }
-  footer a{
+  footer a {
     width: 100%;
   }
 }
