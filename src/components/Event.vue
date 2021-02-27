@@ -1,17 +1,15 @@
 <template>
-  <router-link :to="'/evenementen/' + id">
-    <article class="evenementen-slider__item">
-      <div class="evenementen-slider__image">
-        <img :src="imageSrc" />
-      </div>
-      <div class="evenementen-slider__content">
-        <h2>{{ title }}</h2>
-        <a class="button-more button-link__blue">
-          Meer ...
-        </a>
-      </div>
-    </article>
-  </router-link>
+  <article class="evenementen-slider__item">
+    <div class="evenementen-slider__image">
+      <img :src="imageSrc" />
+    </div>
+    <div class="evenementen-slider__content">
+      <h2>{{ title }}</h2>
+      <router-link :to="'/evenementen/' + id" class="button button-link__blue">
+        Meer...
+      </router-link>
+    </div>
+  </article>
 </template>
 
 <script>
@@ -55,7 +53,6 @@ export default {
 <style lang="scss">
 .evenementen-slider__item {
   width: calc((1200px / 3) - 2em);
-  margin: 1em;
   float: left;
   background-color: white;
   border-top-right-radius: 20px;
@@ -64,6 +61,16 @@ export default {
   padding-bottom: 3rem;
   border-bottom: 3px solid #0559d3;
   position: relative;
+  scroll-snap-align: start;
+  margin: 1em;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   .evenementen-slider__image {
     transition: all 0.2s ease-in-out;
