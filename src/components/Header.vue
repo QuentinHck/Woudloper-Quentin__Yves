@@ -1,7 +1,7 @@
 <template>
   <header
     id="navigation"
-    :class="{ 'navigation-background__colored': scrollIndex > 70 }"
+    :class="{ 'navigation-background__colored': scrollIndex > 10 }"
   >
     <div class="dropdown__navbar container">
       <img src="@/assets/images/logo.png" alt="logo scouts woudloper" />
@@ -22,6 +22,7 @@
           }"
         >
           <ul class="dropdown-menu__list-content">
+            å
             <li v-for="navLink in navLinks" :key="navLink.path">
               <router-link
                 :class="{ active: $route.path === navLink.path }"
@@ -154,7 +155,6 @@ export default {
         display: flex;
         justify-content: center;
         align-content: center;
-
         &-content {
           align-self: center;
           list-style-type: none;
