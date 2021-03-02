@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="evenementen-slider__wrapper">
-          <div class="evenementen-slider__subcontainer">
+          <div class="evenementen-slider__subcontainer" ref="slider">
             <div class="evenementen-slider__frame">
               <Event
                 v-for="event of events"
@@ -46,10 +46,18 @@
             </div>
           </div>
           <div class="evenementen-slider-buttons">
-            <button class="previousBtn evenementen-slider-buttons__left">
+            <button
+              type="button"
+              class="previousBtn evenementen-slider-buttons__left"
+              @click="slideLeft"
+            >
               <span></span>
             </button>
-            <button class="nextBtn evenementen-slider-buttons__right">
+            <button
+              type="button"
+              class="nextBtn evenementen-slider-buttons__right"
+              @click="slideRight"
+            >
               <span></span>
             </button>
           </div>
@@ -87,7 +95,8 @@ export default {
   },
   data() {
     return {
-      scrollIndex: null,
+      slideWidth: 0,
+      scrollIndex: 0,
       events: [
         {
           id: 1,
@@ -128,11 +137,26 @@ export default {
       ],
     };
   },
+  methods: {
+    slideLeft() {
+      this.$refs.slider.scrollLeft =
+        this.$refs.slider.scrollLeft - this.slideWidth;
+    },
+    slideRight() {
+      this.$refs.slider.scrollLeft =
+        this.$refs.slider.scrollLeft + this.slideWidth;
+    },
+  },
   computed: {
     activeEvent: function() {
       let urlId = this.$route.params.eventid;
       return this.events[urlId - 1];
     },
+  },
+  mounted() {
+    this.sliderWidth = this.$refs.slider.offsetWidth;
+    this.slideWidth = this.$refs.slider.children[0].offsetWidth;
+    console.log(this.slideWidth);
   },
 };
 </script>

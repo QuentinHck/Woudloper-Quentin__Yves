@@ -7,6 +7,20 @@
     <AsideBtns />
   </aside>
   <div class="hero"></div>
+  <section id="contact-personen">
+    <div class="container">
+      <h1>Onze leiders</h1>
+      <div class="persons-wrapper">
+        <ProfilePerson
+          v-for="person of leaders"
+          :key="person.id"
+          :image="person.image"
+          :name="person.name"
+          :intro="person.intro"
+        />
+      </div>
+    </div>
+  </section>
   <section id="contact-content">
     <div class="container">
       <div class="contact-content__text">
@@ -87,11 +101,54 @@
 
 <script>
 import AsideBtns from '@/components/AsideBtns';
+import ProfilePerson from '@/components/ProfilePerson';
 
 export default {
   name: 'contact',
   components: {
     AsideBtns,
+    ProfilePerson,
+  },
+  data() {
+    return {
+      leaders: [
+        {
+          id: 1,
+          image: 'icon-person.png',
+          name: 'Jan',
+          intro:
+            'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
+        },
+        {
+          id: 2,
+          image: 'icon-person.png',
+          name: 'Kevin',
+          intro:
+            'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
+        },
+        {
+          id: 3,
+          image: 'icon-person.png',
+          name: 'Pieter',
+          intro:
+            'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
+        },
+        {
+          id: 4,
+          image: 'icon-person.png',
+          name: 'Dieter',
+          intro:
+            'Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.',
+        },
+      ],
+    };
   },
 };
 </script>
+<style lang="scss">
+.persons-wrapper {
+  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>
