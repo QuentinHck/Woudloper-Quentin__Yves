@@ -29,7 +29,6 @@
     </form>
   </div>
   <div
-    @click="toggleAgendaDropdown"
     :class="{
       aside__button: true,
       'button-agenda': true,
@@ -38,53 +37,42 @@
   >
     <div class="aside__heading  agenda-field__heading">
       <h2>Agenda</h2>
-      <div
-        :class="{
-          'agenda-dropdown': true,
-          'dropdown-aside__button': true,
-          open: agendaOpen,
-        }"
-      >
-        <img
-          class="calendar-icon"
-          src="@/assets/images/icon-calendar.svg"
-          alt="icoon kalender"
-        />
+      <div class="containerAgendaDropBtn" @click="toggleAgendaDropdown">
+        <div
+          :class="{
+            'agenda-dropdown': true,
+            'dropdown-aside__button': true,
+            open: agendaOpen,
+          }"
+        >
+          <img
+            class="calendar-icon"
+            src="@/assets/images/icon-calendar.svg"
+            alt="icoon kalender"
+          />
+        </div>
       </div>
     </div>
     <div id="card-calendar" :class="{ 'show-dropdown': agendaOpen }">
       <h2 class="card-header" id="monthAndYear"></h2>
       <table class="table" id="calendar">
-        <thead>
-          <tr>
-            <th>Zo</th>
-            <th>Ma</th>
-            <th>Di</th>
-            <th>Wo</th>
-            <th>Do</th>
-            <th>Vr</th>
-            <th>Za</th>
-          </tr>
-        </thead>
-        <tbody id="calendar-body"></tbody>
-        <div class="calendar-buttons">
-          <button class="previousBtn" onClick="calendarPrev()">
-            <span></span>
-          </button>
-          <button class="nextBtn" onClick="calendarNext()">
-            <span></span>
-          </button>
-        </div>
+        <DatePicker v-model="date" />
       </table>
     </div>
   </div>
 </template>
 
 <script>
+import { DatePicker } from 'v-calendar';
+
 export default {
+  components: {
+    DatePicker,
+  },
   name: 'AsideBtns',
   data() {
     return {
+      date: new Date(),
       dropDownOpen: false,
       agendaOpen: false,
       scrollIndex: null,
@@ -271,7 +259,7 @@ export default {
 }
 
 #card-calendar {
-  width: 400px;
+  padding: 1em;
   position: absolute;
   margin-top: 1rem;
   left: -400px;

@@ -91,7 +91,8 @@ export default {
   .evenementen-slider__content {
     h2 {
       color: white;
-      font-size: 3em;
+      font-size: 2em;
+      font-weight: 100;
       text-shadow: 2px 2px 3px grey;
     }
     a {
