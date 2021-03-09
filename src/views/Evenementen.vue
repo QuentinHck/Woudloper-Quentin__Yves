@@ -161,6 +161,41 @@ export default {
 };
 </script>
 <style lang="scss">
+/*  ------------------ slider evenementen ------------------*/
+
+.evenementen-slider__wrapper {
+  position: relative;
+  .evenementen-slider__subcontainer {
+    overflow-x: scroll;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    scroll-snap-type: x mandatory;
+
+    .evenementen-slider__frame {
+      justify-content: space-between;
+      position: absolute;
+      width: 300vw;
+    }
+  }
+  .evenementen-slider-buttons {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+
+    &__left {
+      left: -45px;
+    }
+
+    &__right {
+      right: -15px;
+      left: auto;
+    }
+  }
+}
+
 .evenementen-slider__main {
   display: flex;
   margin-bottom: 3rem;
