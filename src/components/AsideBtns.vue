@@ -108,7 +108,7 @@ export default {
   box-shadow: 3px 3px 6px -3px rgba(5, 89, 211, 0.87);
   -webkit-box-shadow: 3px 3px 6px -3px rgba(5, 89, 211, 0.87);
   -moz-box-shadow: 3px 3px 6px -3px rgba(5, 89, 211, 0.87);
-
+  text-align: center;
   span {
     display: inline-block;
   }
